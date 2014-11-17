@@ -25,7 +25,7 @@
         <!-- Copy script tags from Plone head to end of body -->
         <after css:theme-children="html head" css:content="html head script" />
        
-        <!-- Insert your own rules here -->
+        <!-- Insert your own rules here -->     
         <rules css:if-content="#portal-column-content.width-full">     
           <drop 
             css:theme=".content-portlets"
@@ -40,8 +40,8 @@
         <replace
             css:theme-children=".account .account-login"
             css:content-children="#portal-personaltools-wrapper #portal-personaltools #anon-personalbar"
-        />        
-    
+        />  
+        
         <replace
             css:content="dt.portletHeader"
             css:theme-children=".portlet .portletHeader span"
@@ -49,7 +49,12 @@
         
         <replace
             css:content-children="#portal-globalnav"
-            css:theme-children="#navigation ul.nav"
+            css:theme-children="#navigation ul.navmenu"
+        />
+        
+         <replace
+            css:content-children="#portal-globalnav .submenu"
+            css:theme-children="#navigation ul.navmenu.nav li"
         />
         
         <replace
@@ -91,11 +96,6 @@
                 css:content="#portal-column-content .documentEditablet #edit-bar"
             />    
         </rules>  
-    
-        <replace
-            css:theme=".site-search"
-            css:content="#portal-searchbox"
-        />
         
         <drop
             css:content="#LSResult #livesearchLegend"/>
@@ -110,16 +110,16 @@
             css:theme-children=".language-switcher"
         />
   
-        <!-- porlet left Start -->
+        <!-- portlet left Start -->
         <replace
             css:theme-children=".portlet-left #maincontent"
-            css:content="#portal-column-content"
+            css:content-children="#portal-column-content"
             css:if-content="#portal-column-one"
             css:if-not-content="#portal-column-two"
         />
         <replace
             css:theme-children=".portlet-left #portlet-left"
-            css:content="#portal-column-one"
+            css:content-children="#portal-column-one"
             css:if-content="#portal-column-one"
             css:if-not-content="#portal-column-two"
         />
@@ -142,13 +142,13 @@
         <!-- porlet right : start -->
         <replace
             css:theme-children=".portlet-right #maincontent"
-            css:content="#portal-column-content"
+            css:content-children="#portal-column-content"
             css:if-content="#portal-column-two"
             css:if-not-content="#portal-column-one"
         />
         <replace
             css:theme-children=".portlet-right #portlet-right"
-            css:content="#portal-column-two"
+            css:content-children="#portal-column-two"
             css:if-content="#portal-column-two"
             css:if-not-content="#portal-column-one"
         />
@@ -167,35 +167,12 @@
             css:if-content="#portal-column-two"
             css:if-not-content="#portal-column-one"
         />
-        <rules css:if-content="#site_contact_link">
-            <replace
-                css:theme=".list-your-property"
-                css:content="#site_contact_link"
-                method="raw"
-            />
-            <drop
-                css:content="#site_contact_link"
-            />
-        </rules>
-        <rules css:if-content=".site_contact_phone">
-            <prepend
-                css:theme=".info .site-phone"
-                css:content=".site_contact_phone"
-                method="raw"
-            />
-            <drop
-                css:content=".site_contact_phone"/>
-        </rules>
-        <replace
-            css:theme-children=".site-name .brand"
-            css:content-children=".titlecontact h1"
-        />
         <!-- porlet bold : start -->
             <rules css:if-content="#portal-column-one">
                 <rules css:if-content="#portal-column-two">
                 <replace
                 css:theme-children=".portlet-both #maincontent"
-                css:content="#portal-column-content"
+                css:content-children="#portal-column-content"
                 />
                 <drop
                     css:theme=".no-portlet"
@@ -211,14 +188,14 @@
             <rules css:if-content="#portal-column-one">
                 <replace
                 css:theme-children="#portlet-right"
-                css:content="#portal-column-two"
+                css:content-children="#portal-column-two"
                 css:if-content="#portal-column-two"
                 />
             </rules>
             <rules css:if-content="#portal-column-two">
                 <replace
                     css:theme-children="#portlet-left"
-                    css:content="#portal-column-one"
+                    css:content-children="#portal-column-one"
                     css:if-content="#portal-column-one"
                 />            
             </rules>
@@ -228,7 +205,7 @@
                 <rules css:if-not-content="#portal-column-two">
                     <replace
                         css:theme-children=".no-portlet #maincontent"
-                        css:content="#portal-column-content"/>
+                        css:content-children="#portal-column-content"/>
                 <drop
                     css:theme=".portlet-both"
                 />

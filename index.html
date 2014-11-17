@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         
-          <!--Title-->
+        <!--Title-->
         <title>K-Vanilla</title>
 
         <!--CSS-->
@@ -19,10 +19,9 @@
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
         
-          <!--Jquery-->
+        <!--Jquery-->
        	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-       	<script type="text/javascript" src="js/jquery.js"></script>
-           
+       	<script type="text/javascript" src="js/jquery.js"></script>       
     </head>
     <body class="no-js">
 	    <div id="global-wrapper">
@@ -32,9 +31,7 @@
 	                <div class="container">
 	                   	<div class="span12">
 	                        <ul class="breadcrumb pull-left">
-	                            <li>
-	                            	<a href="index.html">Home</a>
-	                            </li>
+                                <li></li>                            
 	                        </ul><!-- /.breadcrumb -->
 	    
 	                        <div class="account pull-right">
@@ -50,39 +47,45 @@
 	    
 	            <!-- HEADER -->
 	           	<div id="header">
-	      			<div id="header-inner">
 	               		<div class="container">
 	                    	<div class="navbar">
-	                     		<div class="navbar-inner">
-	                       			<div class="logo-wrapper span4">
-	                            		<a class="hidden-desktop" id="btn-nav">Toggle navigation</a>
-	                                    <div class="logo">
-	                                    	<a href="index.html" title="Home">
-	                                    		<img src="img/logo.png" alt="Home">
-	                                    	</a>
-	                            		</div><!-- /.logo -->
-	                                </div><!-- /.logo-wrapper -->
-	                            </div><!-- /.navbar-inner -->
+	                       		<div class="logo-wrapper span4">
+	                               <div class="logo">
+	                                   <a href="index.html" title="Home">
+	                                       <img src="img/logo.png" alt="Home">
+	                                   </a>
+	                            	</div><!-- /.logo -->
+	                               </div><!-- /.logo-wrapper -->
 	                        </div><!-- /.navbar -->
 	                    </div><!-- /.container -->
-	                </div><!-- /#header-inner -->
 	            </div><!-- /#header -->
 	    
-	                <!-- NAVIGATION -->
+	            <!-- NAVIGATION -->
 	          	<div id="navigation">
 	               	<div class="container">
-	               		<div class="navigation-wrapper">
-	                    	<form method="get" class="site-search" action="?">
-	                        	<div class="input-append">
-	                            	<input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" name="">
-	                                <button type="submit" class="btn"><i class="icon-search"></i></button>
-	                            </div><!-- /.input-append -->
-	                        </form><!-- /.site-search -->
-	                    </div><!-- /.navigation-wrapper -->
+                   		<div class="navbar-header">
+                           <button class="navbar-toggle collapsed btn btn-primary" data-toggle="collapse" data-target="#id_nav1">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>       
+                                <span class="icon-bar"></span>                                
+                           </button>
+                        </div>
+                        <div class="navbar-collapse collapse" id="id_nav1">
+                            <ul class="navmenu nav navbar-nav nav-pills">
+                                <li><a> Menu 1</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown"> Link </a>
+                                    <ul class="dropdown-menu"><li><a> Submenu 1</a></li>
+                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+	                   </div><!-- /.navbar-header -->
 	                </div><!-- /.container -->
 	           	</div><!-- /.navigation -->
 	    
-                            <!-- CONTENT -->
+                <!-- CONTENT -->
            		<div id="content" class="container">
                     <div class="row portlet-right">
                         <div class="span9" id="maincontent"></div>
