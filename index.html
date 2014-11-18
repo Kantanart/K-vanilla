@@ -6,22 +6,22 @@
 <!--[if gt IE 8]><!--> 
 <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
-        <!--Meta tag-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        
-        <!--Title-->
-        <title>K-Vanilla</title>
-
         <!--CSS-->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
-        
+        <!--Meta tag-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <!--Jquery-->
-       	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-       	<script type="text/javascript" src="js/jquery.js"></script>       
+        <!-- script type="text/javascript" src="js/jquery.js-->
+        <script type="text/javascript">
+            jQuery=$;   
+        </script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!--Title-->
+        <title>K-Vanilla</title>
     </head>
     <body class="no-js">
 	    <div id="global-wrapper">
@@ -29,7 +29,7 @@
 	            <!-- BREADCRUMB -->
 	            <div class="breadcrumb-wrapper">
 	                <div class="container">
-	                   	<div class="span12">
+	                   	<div class="col-md-12">
 	                        <ul class="breadcrumb pull-left">
                                 <li></li>                            
 	                        </ul><!-- /.breadcrumb -->
@@ -41,7 +41,7 @@
 	                                </li>
 	                            </ul>
 	                        </div><!-- /.account -->
-	                    </div><!-- /.span12 -->
+	                    </div><!-- /.col-md-12 -->
 	                </div><!-- /.container -->
 	            </div><!-- /.breadcrumb-wrapper -->
 	    
@@ -49,7 +49,7 @@
 	           	<div id="header">
 	               		<div class="container">
 	                    	<div class="navbar">
-	                       		<div class="logo-wrapper span4">
+	                       		<div class="logo-wrapper col-md-4">
 	                               <div class="logo">
 	                                   <a href="index.html" title="Home">
 	                                       <img src="img/logo.png" alt="Home">
@@ -88,27 +88,43 @@
                 <!-- CONTENT -->
            		<div id="content" class="container">
                     <div class="row portlet-right">
-                        <div class="span9" id="maincontent"></div>
-                       	<div class="sidebar span3" id="portlet-right"></div>
+                        <div class="col-md-9" id="maincontent"></div>
+                       	<div class="sidebar col-md-3" id="portlet-right"></div>
                   	</div>
                     <div class="row portlet-left">
-                        <div class="sidebar span3" id="portlet-left"></div>
-                        <div class="span9" id="maincontent"></div>
+                        <div class="sidebar col-md-3" id="portlet-left"></div>
+                        <div class="col-md-9" id="maincontent"></div>
                     </div>
                     <div class="row portlet-both">
-                        <div class="sidebar span3" id="portlet-left"></div>
-                        <div class="span6" id="maincontent"></div>
-                        <div class="sidebar span3" id="portlet-right"></div>
+                        <div class="sidebar col-md-3" id="portlet-left"></div>
+                        <div class="col-md-6" id="maincontent"></div>
+                        <div class="sidebar col-md-3" id="portlet-right"></div>
                     </div>
                     <div class="row no-portlet">
-                        <div class="span12" id="maincontent">
+                        <div class="col-md-12" id="maincontent">
                             <span>No Portlets</span>
                         </div>
                     </div>
                 </div>
 	    	</div><!-- /#wrapper-inner -->
-	    </div><!-- /#global-wrapper -->
-    
-    
+
+            <div id="footer-wrapper">
+                <div id="footer-top">
+                    <div id="footer-top-inner" class="container">
+                        <div class="row">
+                        </div><!-- /.row -->
+                    </div><!-- /#footer-top-inner -->
+                </div><!-- /#footer-top -->
+
+                <div id="colophone" class="footer">
+                    <div class="colophone-inner container">
+                        <div class="row">
+                        </div><!-- /.row -->
+                    <div class="siteactions">
+                    </div><!-- /.siteactions -->
+                </div><!-- /#colophone -->
+            </div><!-- /#footer-wrapper -->
+            
+	    </div><!-- /#global-wrapper --> 
     </body>
 </html>

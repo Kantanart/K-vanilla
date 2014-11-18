@@ -63,8 +63,13 @@
         />
 
         <replace
-            css:content-children="#footer.container"
-            css:theme-children="#footer.container"
+            css:content-children="#portal-colophon"
+            css:theme="#colophone .container .row"
+        />
+        
+         <replace
+            css:content-children="#footer #footer-inner .row"
+            css:theme="#colophone .container .siteactions"
         />
         
         <drop
