@@ -25,7 +25,7 @@
         <!-- Copy script tags from Plone head to end of body -->
         <after css:theme-children="html head" css:content="html head script" />
        
-        <!-- Insert your own rules here -->     
+        <!-- Insert your own rules here -->       
         <rules css:if-content="#portal-column-content.width-full">     
           <drop 
             css:theme=".content-portlets"
