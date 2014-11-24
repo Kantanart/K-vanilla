@@ -26,7 +26,24 @@
         <after css:theme-children="html head" css:content="html head script" />
 
         
-        <!-- Insert your own rules here -->     
+        <!-- Insert your own rules here -->    
+
+        <!-- Add manage-viewlets Top-->    
+        <rules css:if-content="#plone-portaltop.managedViewlets">     
+          <before 
+            css:content-children="#visual-portal-wrapper #portal-top .cell"
+            css:theme="#content .row #maincontent"
+          />
+        </rules>
+        
+        <!-- Add manage-viewlets Footer-->    
+        <rules css:if-content="#plone-portalfooter.managedViewlets">     
+            <after 
+                css:content-children="#visual-portal-wrapper #portal-footer-wrapper .cell"
+                css:theme="#content .row #maincontent"
+            />
+        </rules>
+        
         <rules css:if-content="#portal-column-content.width-full">     
           <drop 
             css:theme=".content-portlets"
