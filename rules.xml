@@ -95,7 +95,7 @@
         />
 
         <replace
-            css:theme-children=".breadcrumb-wrapper ul.breadcrumb.pull-left li"
+            css:theme-children="#content .row .breadcrumb-wrapper ul.breadcrumb.pull-left li"
             css:content-children="#portal-breadcrumbs"
         />
         
