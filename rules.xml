@@ -43,6 +43,18 @@
                 css:theme="#content .row #maincontent"
             />
         </rules>
+
+        <replace
+            css:theme=".site-search"
+            css:content="#portal-searchbox"
+        />
+
+        <replace
+            css:content="#portal-languageselector"
+            css:theme-children=".language-switcher"
+        />
+        
+
         
         <rules css:if-content="#portal-column-content.width-full">     
           <drop 
@@ -94,10 +106,7 @@
             css:theme="#breadcrumbs-you-are-here"
         />
 
-        <replace
-            css:theme-children="#content .row .breadcrumb-wrapper ul.breadcrumb.pull-left li"
-            css:content-children="#portal-breadcrumbs"
-        />
+
         
         <drop
             css:content="span#breadcrumbs-you-are-here"/>
