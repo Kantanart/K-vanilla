@@ -21,11 +21,6 @@
 .template-layoutedit .navbar-toggle{
     display: none;
 }
-#portal-searchbox {
-    left: 77%;
-    position: absolute;
-    top: 192px;
-}
 .template-manage-viewlets .breadcrumb-wrapper {
     display: none;
 }
@@ -115,7 +110,7 @@ label.horizontal{
 }
 span.label{
     color: @color-span;
-    color: @add-font-size-span;
+    font-size: @add-font-size-span;
 }
 span.carousel-title {
     font-size: @add-font-size-carousel-title;
@@ -187,6 +182,7 @@ span.carousel-title {
     .navbar-header {
         button.btn {
             float: left;
+            margin-left: 26px;
         }
     }
 }
@@ -212,6 +208,12 @@ ul#content-views li{
 }
 .actionMenu dd.actionMenuContent{
     z-index: 10;
+}
+.logo {
+    width: 100%;
+}
+.logo-wrapper .info{
+    max-width: 100%;
 }
 #header #header-inner .container{
     z-index: 1;
@@ -370,11 +372,6 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }      
-    #portal-searchbox {
-        left: 77%;
-        position: absolute;
-        top: 192px;
-    }
     #global-wrapper tbody tr td p .image-inline{
         width: 100%;
     }
@@ -390,9 +387,6 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }       
-    #portal-searchbox {
-        display: none;
-    }
     #global-wrapper tbody tr td p .image-inline{
         width: 100%;
     }
@@ -411,9 +405,6 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }          
-    #portal-searchbox {
-        display: none;
-    }
     #global-wrapper tbody tr td p .image-inline{
         width: 100%;
     }
@@ -444,14 +435,21 @@ ul#portal-languageselector:hover li {
     .documentEditable #content .listing-summary section {
         width: 100%;
     }   
-    #portal-searchbox {
-        display: none;
-    }
     #global-wrapper tbody tr td p .image-inline{
-        width: 100%;
+        max-width: 100%;
     }
     #content .mlsec_latest-listings .listing-collection-tile .collection-item {
         width: 100%;
+    }
+    body div.width-10.position-0, body div.width-4.position-10{
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    body div.position-10.width-6{
+        left: 0;
+        margin-left: 0;
+        width: 99%;
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
@@ -476,14 +474,21 @@ ul#portal-languageselector:hover li {
     }
     .documentEditable #content .listing-summary section {
         width: 100%;
-    }   
-    #portal-searchbox {
-        display: none;
     }
     #global-wrapper tbody tr td p .image-inline{
-        width: 100%;
+        max-width: 100%;
     }
     #content .mlsec_latest-listings .listing-collection-tile .collection-item {
         width: 100%;
+    }
+    body div.width-10.position-0, body div.width-4.position-10{
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    body div.position-10.width-6{
+        left: 0;
+        margin-left: 0;
+        width: 99%;
     }
 }

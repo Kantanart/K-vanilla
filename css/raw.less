@@ -10,7 +10,6 @@
     background: transparent !important;
     box-shadow: none !important;
     text-decoration: none !important;
-    padding-left: 15px;
 }
 #portal-searchbox #LSResult {
     background: rgba(255,255,255,1);
@@ -59,28 +58,142 @@
 #footer-wrapper #colophone .colophone-inner{
     padding-top: 10px;
 }
+.site-social {
+    float: right;
+    width: auto;
+}
+.site-email {
+    float: left;
+    width: auto;
+    margin-left: 40px;
+}
+.site-phone {
+    float: left;
+    width: auto;
+    margin-left: 40px;
+}
+.logo-wrapper .logo {
+    float: left;
+}
+.logo-wrapper .info{
+    float: left;
+}   
+#portal-searchbox {
+    left: 77%;
+    position: absolute;
+    top: 192px;
+}
 @media (max-width: 1600px) and (min-width: 1301px) { 
-    
+    #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+        padding-left: 15px;
+    }
+    .logo-wrapper .logo {
+        width: 38%;
+    }
+    .logo-wrapper .info{
+        width: 50%;
+    }    
 }
 @media (max-width: 1300px) and (min-width: 1201px) {
-
+    #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+        padding-left: 15px;
+    }
+    .logo-wrapper .logo {
+        width: 38%;
+    }
+    .logo-wrapper .info{
+        width: 50%;
+    }
 }
 @media (max-width: 1200px) and (min-width: 981px) {
-
+    #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+        padding-left: 15px;
+    }
+    .logo-wrapper .logo {
+        width: 48%;
+    }
+    .logo-wrapper .info{
+        width: 50%;
+    }
 }
 @media (max-width: 980px) and (min-width: 801px) {
-
+    #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+        padding-left: 15px;
+    }
+    .logo {
+        width: 49%;
+        float: left;
+    }
+    .logo-wrapper .info{
+        width: 48%;
+        float: left;
+    }
+    #portal-searchbox {
+        left: 69%
+    }
 }
 @media (max-width: 800px) and (min-width: 768px) {
-   
+    #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+        padding-left: 15px;
+    }
+    .logo-wrapper .logo {
+        width: 37%;      
+    }
+    .logo-wrapper .info{
+        width: 50%;
+    }
+    #portal-searchbox {
+        left: 70%
+    }
 }
 @media (max-width: 767px) and (min-width: 481px) {    
+    .navbar-collapse .navmenu li ul.submenu {
+        position: static;
+        transition: all 0.5s ease 0.5s;
+        border-left: 8px solid !important;
+        border-right: 8px solid !important;
+    }
+    .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
+        border-left: 1px solid !important;
+        border-right: 1px solid !important;
+    }
+    .logo-wrapper .logo {
+        left: 21%;
+        position: relative;
+        width: 56%;
+    }
+    .logo-wrapper .info{
+        display: none;
+    }
     ul.navmenu li{
         text-align: center;
         width: 100%;
     }
+    #portal-searchbox {
+        display: none;
+    }
 }
 @media (max-width: 480px) and (min-width: 1px) {
+    .navbar-collapse .navmenu li ul.submenu {
+        position: static;
+        transition: all 0.5s ease 0.5s;
+        border-left: 8px solid !important;
+        border-right: 8px solid !important;
+    }
+    .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
+        border-left: 1px solid !important;
+        border-right: 1px solid !important;
+    }
+    .logo-wrapper .logo {
+        margin: 0 5%;
+        width: 90%;
+    }
+    .logo-wrapper .info{
+        display: none;
+    }
+    #portal-searchbox {
+        display: none;
+    }
     ul.navmenu li{
         text-align: center;
         width: 100%;
