@@ -36,6 +36,53 @@
           />
         </rules>
         
+        <rules css:if-content=".site_contact_email">
+            <prepend
+                css:theme=".site-email"
+                css:content-children=".site_contact_email"
+            />
+            <drop
+                css:content=".site_contact_email"
+            />
+        </rules>
+        
+        <rules css:if-content=".site_social_link">
+            <prepend
+                css:theme=".site-social"
+                css:content-children=".site_social_link"
+            />
+            <drop
+                css:content=".site_social_link"
+            />
+        </rules>
+
+        <rules css:if-content=".site_contact_phone">
+            <prepend
+                css:theme=".site-phone"
+                css:content-children=".site_contact_phone"
+            />
+            <drop
+                css:content=".site_contact_phone"
+            />
+        </rules>
+        
+        <rules css:if-content="div.carousel">
+            <append 
+                css:content="#viewlet-above-content div.carousel" 
+                css:theme="#carousel-wrapper .carousel-inner"
+                method="raw"
+            />
+            <drop
+                css:content="#viewlet-above-content .carousel" 
+            />
+        </rules>
+        
+        <rules css:if-not-content="div.carousel">
+            <drop
+                css:theme="#carousel-wrapper" 
+            />
+        </rules>
+        
         <!-- Add manage-viewlets Footer-->    
         <rules css:if-content="#plone-portalfooter.managedViewlets">     
             <after 
