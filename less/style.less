@@ -1,5 +1,6 @@
 @import "color.less";
 @import "font.less";
+@import "command.less";
 
 #content .portlet-both,
 #content .portlet-right,
@@ -8,6 +9,11 @@
 }
 #navigation #id_nav1 ul.navmenu li:hover> ul.submenu {
     display: block;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 .portlet .portletHeader .managedPortletActions{
     font-size: 14px !important;
@@ -501,5 +507,12 @@ ul#portal-languageselector:hover li {
     }
     #wrapper-inner #navigation #id_nav1.navbar-collapse.list-open {
         display: block;
+    }
+    #content .row .cell   {
+        float: left;
+        left: 100%;
+        margin: 0 !important;
+        position: static;
+        width: 100% !important;
     }
 }

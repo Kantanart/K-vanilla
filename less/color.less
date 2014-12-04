@@ -10,7 +10,6 @@
 @bg-doormat: #f2f2f2;
 @bg-colophone: #333;
 
-
 // ----- Menu -----
 @color-background-menu: @bg-main;
 @color-background-menu-button: @bg-main;
@@ -57,4 +56,15 @@
 @color-link-colophone: @link;
     // ----- Hover,Focus -----
     @color-link-colophone-hover: @link-hover;
+
+// ----- gradient-background -----
+.gradient-background (@origin: left, @start: #EFFBF8, @stop: #FBF5EF) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
 

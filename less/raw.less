@@ -48,7 +48,7 @@ label.horizontal.collapser.expanded {
     border-right: 1px solid;
     padding: 0;
     z-index: 998; 
-    transition: all 0.8s ease 0.8s;
+    .transition;
     min-width: 200px;
 }
 .breadcrumb-wrapper .breadcrumb{
@@ -59,6 +59,7 @@ label.horizontal.collapser.expanded {
 }
 #navigation #id_nav1 ul.navmenu li ul.submenu li {
     padding-top: 10px;
+    position: relative;
 }
 #navigation #id_nav1 ul.navmenu li ul.submenu li a { 
     padding-left: 10px;
@@ -156,7 +157,7 @@ label.horizontal.collapser.expanded {
 @media (max-width: 767px) and (min-width: 481px) {    
     .navbar-collapse .navmenu li ul.submenu {
         position: static;
-        transition: all 0.5s ease 0.5s;
+        .transition;
         border-left: 8px solid !important;
         border-right: 8px solid !important;
     }
@@ -189,11 +190,24 @@ label.horizontal.collapser.expanded {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
-    .navbar-collapse .navmenu li ul.submenu {
-        position: static;
-        transition: all 0.5s ease 0.5s;
-        border-left: 8px solid !important;
-        border-right: 8px solid !important;
+    #navigation #id_nav1 ul.navmenu li ul.submenu {
+        position: absolute;
+        top: 38px;
+        left: 121px;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .submenu {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
+         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+         padding-right: 16px;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
+         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
+         padding-right: 16px;
+         border: none !important;
     }
     .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
         border-left: 1px solid !important;
