@@ -3,11 +3,7 @@
 #navigation #id_nav1 ul.navmenu li a {
     .add-style-of-navbar-button-text;
 }
-#navigation #id_nav1 ul.navmenu li a:hover, #navigation #id_nav1 ul.navmenu li a:focus {
-    .add-style-of-navbar-button-text-hover !important;
-}
 #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
-    background: transparent !important;
     box-shadow: none !important;
     text-decoration: none !important;
 }
@@ -155,11 +151,34 @@ label.horizontal.collapser.expanded {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {    
+    .language-switcher #portal-languageselector{
+        top: -5px;
+    }
     .navbar-collapse .navmenu li ul.submenu {
         position: static;
         .transition;
-        border-left: 8px solid !important;
-        border-right: 8px solid !important;
+    }
+    .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
+        border-left: 1px solid !important;
+        border-right: 1px solid !important;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu {
+        position: absolute;
+        top: 38px;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .submenu {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
+         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+         padding-right: 16px;
+    }
+    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
+         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
+         padding-right: 16px;
+         border: none !important;
     }
     .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
         border-left: 1px solid !important;
@@ -190,10 +209,12 @@ label.horizontal.collapser.expanded {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
+    .language-switcher #portal-languageselector{
+        top: -5px;
+    }
     #navigation #id_nav1 ul.navmenu li ul.submenu {
         position: absolute;
         top: 38px;
-        left: 121px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .submenu {
         position: relative;

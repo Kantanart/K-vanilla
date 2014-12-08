@@ -7,13 +7,60 @@
 #content .portlet-left {
     margin:0;
 }
-#navigation #id_nav1 ul.navmenu li:hover> ul.submenu {
-    display: block;
+#global-wrapper {
+    color: @color-main;
+    #wrapper-inner {
+        background-color: @bg-wrapper-inner;
+        #account-personaltools {
+            background-color: @bg-account;
+        }
+        #header {
+            background-color: @bg-header;
+        }
+        #navigation {
+            background-color: @bg-navigation !important;
+            .container {
+                position: relative;
+                #id_nav1 {
+                    background-color: @bg-navigation-navbar !important;
+                    ul.navmenu {
+                        background-color: @bg-navigation-submenu !important;
+                        li {
+                            background-color: @bg-navigation-submenu-li !important;
+                            a {
+                                font-size: @add-font-size-menu;
+                                background-color: @bg-navigation-submenu-li-button;
+                                color: @color-menu !important;
+                                &:hover,&:focus{
+                                    background-color: @bg-navigation-submenu-li-button-hover;
+                                    color: @color-menu-hover !important;
+                                    box-shadow: 0px 0px 20px #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar-header {
+                button.btn {
+                    float: left;
+                    margin-left: 26px;
+                }
+            }
+        }
+    }
+    #content {
+        background-color: @bg-content;
+    }
 }
+
 img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+}
+#navigation #id_nav1 ul.navmenu li:hover> ul.submenu {
+    display: block;
 }
 .portlet .portletHeader .managedPortletActions{
     font-size: 14px !important;
@@ -50,10 +97,10 @@ img {
     font-size: 30px;
 }
 dl.portlet dt.portletHeader {
-    background: @color-background-portlet-header;
+    background: @bg-portlet-header;
 }
 .portlet .ploneCalendar .weekdays th {
-    background: @color-background-portlet-calendar;
+    background: @bg-portlet-calendar;
 }
 .row {
     margin: 0;
@@ -68,11 +115,11 @@ ul#content-views {
     float: left;
 }
 .breadcrumb-wrapper .breadcrumb li span a,.breadcrumb-wrapper .breadcrumb li span span {
-    color: @color-text-breadcrumb;
+    color: @color-breadcrumb;
     text-decoration: none !important;
 }
 .breadcrumb-wrapper .breadcrumb a:hover {
-    color: @color-text-breadcrumb-hover;
+    color: @color-breadcrumb-hover;
     text-decoration: none !important;
 }
 #portal-breadcrumbs {
@@ -131,70 +178,47 @@ span.carousel-title {
     font-size: @add-font-size-header-recent;
     color: @color-header-recent;
 }
-#footer-top {
-    background-color: @color-background-footer;
-    #footer-top-inner {
-        background-color: @color-background-footer-inner;
-            h2{
-                color: @color-h2-doormat;
-            }
-            .doormatColumn {
-                h3{
-                    color: @color-h3-section;
+#footer-wrapper {
+    background-color: @bg-doormat;
+    #footer-top {
+        background-color: @bg-footer-top;
+        #footer-top-inner {
+            background-color: @bg-footer-inner;
+                h2{
+                    color: @color-h2-doormat;
                 }
-                .doormatSection {
-                    color: @color-doormat;
-                    .doormatSectionHeader {
-                        color: @color-SectionHeader;
+                .doormatColumn {
+                    h3{
+                        color: @color-h3-section;
+                    }
+                    .doormatSection {
+                        color: @color-doormat;
+                        .doormatSectionHeader {
+                            color: @color-SectionHeader;
+                        }
                     }
                 }
-            }
+        }
     }
-}
-#colophone {
-    background-color: @color-background-colophone;
-    .colophone-inner {
-        background-color: @color-background-colophone-inner;
-        color: @color-colophone;
-         a {
-            color: @color-link-colophone; 
-            &:hover,&:focus{
-                color: @color-link-colophone-hover; 
-                text-decoration: none !important;
-            }
-        }        
+    #colophone {
+        background-color: @bg-colophone;
+        .colophone-inner {
+            background-color: @bg-colophone-inner;
+            color: @color-colophone;
+             a {
+                color: @color-link-colophone; 
+                &:hover,&:focus{
+                    color: @color-link-colophone-hover; 
+                    text-decoration: none !important;
+                }
+            }        
+        }
     }
 }
 #content .documentDescription{
     color: @color-of-description;
 }
-#navigation {
-    background-color: @color-background-menu !important;
-    #id_nav1 {
-        background-color: @color-background-menu !important;
-        ul.navmenu {
-            background-color: @color-background-menu !important;
-            li {
-                background-color: @color-background-menu !important;
-                a {
-                    font-size: @add-font-size-menu;
-                    background-color: @color-background-menu-button;
-                    color: @color-font-menu !important;
-                    &:hover,&:focus{
-                        background-color: @color-background-menu-button-hover;
-                        color: @color-font-menu-hover !important;
-                    }
-                }
-            }
-        }
-    }
-    .navbar-header {
-        button.btn {
-            float: left;
-            margin-left: 26px;
-        }
-    }
-}
+
 ul#content-views li{
     display: inline;
     margin: 0;
@@ -268,9 +292,9 @@ ul#portal-languageselector:hover li {
 }
 .language-switcher {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    float: right;
     margin: 13px 0 11px;
-    position: relative;
+    position: absolute;
+    right: 2%;
     #portal-languageselector {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         position: absolute;
@@ -418,6 +442,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
+    .language-switcher{
+        top: 0;
+    }
      .listing #listing-info {
         bottom: -427px;
         width: 100%;
@@ -428,16 +455,16 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }      
-    .documentEditable #content .listing-summary figure a {
+    #maincontent #content .listing-summary figure a {
         text-align: center;
     }
-    .documentEditable #content .listing-summary figure img {
+    #maincontent #content .listing-summary figure img {
         width: auto;
     }
-    .documentEditable #content .listing-summary figure {
+    #maincontent #content .listing-summary figure {
         width: 100%;
     }
-    .documentEditable #content .listing-summary section {
+    #maincontent #content .listing-summary section {
         width: 100%;
     }   
     #global-wrapper tbody tr td p .image-inline{
@@ -464,6 +491,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
+    .language-switcher{
+        top: 0;
+    }
       .listing #listing-info {
         bottom: -418px;
         width: 100%;
@@ -474,16 +504,16 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }     
-    .documentEditable #content .listing-summary figure a {
+    #maincontent #content .listing-summary figure a {
         text-align: center;
     }
-    .documentEditable #content .listing-summary figure img {
+    #maincontent #content .listing-summary figure img {
         width: auto;
     }
-    .documentEditable #content .listing-summary figure {
+    #maincontent #content .listing-summary figure {
         width: 100%;
     }
-    .documentEditable #content .listing-summary section {
+    #maincontent #content .listing-summary section {
         width: 100%;
     }
     #global-wrapper tbody tr td p .image-inline{

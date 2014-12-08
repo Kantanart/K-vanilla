@@ -1,61 +1,75 @@
-// -----Text-----
-@main-color: #707070;
-@header-listing: #A3A1A1;
-@header-listing-hover: #449404;
-@link: @main-color ;
-@link-hover: #FF8000;
-@text-colophone: #e6e6e6;
-// -----Background-----
-@bg-main: #fff;
-@bg-doormat: #f2f2f2;
-@bg-colophone: #333;
+// ----- Background - Start -----
 
-// ----- Menu -----
-@color-background-menu: @bg-main;
-@color-background-menu-button: @bg-main;
-@color-font-menu: @main-color;
-@color-background-breadcrumb: @bg-main;
-@color-text-breadcrumb: @bg-main;
-@color-background-portlet-header: @bg-main;
-@color-background-portlet-calendar: @bg-main;
+    // -----Main Background-----
+    @bg-wrapper-inner:transparent;
+    @bg-account: #0B1731;
+    @bg-header: #fff;
+    @bg-navigation: #fff;
+    @bg-navigation-button: #e3e3e3;
+    @bg-navigation-button-hover: #e3e3e3;
+    @bg-content: #fff;
+    @bg-doormat: #e3e3e3 ;
+    @bg-colophone: @bg-account;
+    // ----- Background of Menu-----
+    @bg-navigation-navbar: @bg-navigation-button;
+    @bg-navigation-submenu: @bg-navigation-button;
+    @bg-navigation-submenu-li: @bg-navigation-button;
+    @bg-navigation-submenu-li-button: @bg-navigation-button;
+    @bg-navigation-submenu-li-button-hover: @bg-navigation-button-hover;
+    // ----- Background of Footer&Colophone-----
+    @bg-footer-top: @bg-doormat;
+    @bg-footer-inner: @bg-doormat;    
+    @bg-colophone-inner: @bg-colophone;
+    // ----- Background ETC ------
+    @bg-portlet-header: @bg-content;
+    @bg-portlet-calendar: @bg-content;
 
-    // ----- Hover,Focus -----
-    @color-font-menu-hover: @main-color;
+// ----- Background - End -----
+
+// ----- Text - Start-----
+    // ----- Text - Main-----
+    @color-main: #707070;
+    @color-link: #9595ff;
+    @color-link-hover: #ffa48a;
+    @color-menu: #707070;
+    @color-menu-hover: #ffa48a;
+    @color-header-listing: #A3A1A1;
+    @color-header-listing-hover: #449404;
+    @color-link-hover: #FF8000;
+    @text-colophone: #e6e6e6;
+    @bg-main: #fff;
+        
+    // -----Text/Background -----
+    @color-header-recent: @color-header-listing;
+    @color-first-heading: @color-header-listing;
+    @color-of-description: @color-header-listing;
+    @color-h1: @color-header-listing;
+    @color-h2: @color-header-listing;
+    @color-h3: @color-main;
+    @color-h4: @color-main;
+    @color-p: @color-main;
+    @color-span: @color-main;
+    @color-of-strong: @color-main;
+    @color-label-horizontal: @color-main;
+    @color-span-form: @color-main;
+    @color-breadcrumb: @color-main;
     @color-background-menu-button-hover: @bg-main;
-    @color-text-breadcrumb-hover: @link-hover;
-    
-// -----Text/Background -----
-@color-header-recent: @header-listing;
-@color-first-heading: @header-listing;
-@color-of-description: @header-listing;
-@color-h1: @header-listing;
-@color-h2: @header-listing;
-@color-h3: @main-color;
-@color-h4: @main-color;
-@color-p: @main-color;
-@color-span: @main-color;
-@color-link: @link;
-@color-of-strong: @main-color;
-@color-label-horizontal: @main-color;
-@color-span-form: @main-color;
-    // ----- Hover,Focus -----
-    @color-link-hover: @link-hover;
+    @color-breadcrumb-hover: @color-link-hover;
+    @color-link-hover: @color-menu-hover;
 
-// ----- Footer Text/Background -----
-@color-background-footer: @bg-doormat;
-@color-background-footer-inner: @bg-doormat;
-@color-h2-doormat: @header-listing;
-@color-h3-section: @header-listing;
-@color-doormat: @main-color;
-@color-SectionHeader: @main-color;
+    // ----- Footer Text/Background -----
+    @color-h2-doormat: @color-header-listing;
+    @color-h3-section: @color-header-listing;
+    @color-doormat: @color-main;
+    @color-SectionHeader: @color-main;
 
-// ----- Colophone Text/Background -----
-@color-background-colophone: @bg-colophone;
-@color-background-colophone-inner: @bg-colophone;
-@color-colophone: @text-colophone;
-@color-link-colophone: @link;
-    // ----- Hover,Focus -----
-    @color-link-colophone-hover: @link-hover;
+    // ----- Colophone Text/Background -----
+    @color-background-colophone-inner: @bg-colophone;
+    @color-colophone: @text-colophone;
+    @color-link-colophone: @color-link;
+    @color-link-colophone-hover: @color-link-hover;
+
+
 
 // ----- gradient-background -----
 .gradient-background (@origin: left, @start: #EFFBF8, @stop: #FBF5EF) {

@@ -137,7 +137,7 @@ $(document).ready(function() {
     if($(".listing-search-tile.tile-content").length >0){
         toggle_listing_type();
     }
-    
+
     if($("div.carousel").length >0){
         move_menubar();
     }
