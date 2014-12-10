@@ -1,5 +1,8 @@
 @import "command.less";
 
+#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:hover,#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:focus {
+    box-shadow: 0px 0px 20px #000;
+}
 #navigation #id_nav1 ul.navmenu li a {
     .add-style-of-navbar-button-text;
 }
@@ -8,11 +11,9 @@
     text-decoration: none !important;
 }
 label.horizontal.collapser.collapsed {
-    background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     padding-right: 14px;
 }
 label.horizontal.collapser.expanded {
-    background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     padding-right: 14px;
 }
 #portal-searchbox #LSResult {
@@ -28,9 +29,6 @@ label.horizontal.collapser.expanded {
 #navigation #id_nav1 ul.navmenu li ul.submenu li a {
     padding: 6px;
     white-space: nowrap;
-}
-.navbar-toggle .icon-bar{
-    background: none repeat scroll 0 0 gray;
 }
 #navigation #id_nav1.navbar-collapse {
     .add-main-of-navbar;
@@ -222,11 +220,9 @@ label.horizontal.collapser.expanded {
         left: 0;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
-         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
          padding-right: 16px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
-         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
          padding-right: 16px;
          border: none !important;
     }

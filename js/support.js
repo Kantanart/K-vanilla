@@ -2,11 +2,13 @@
 function move_menubar(){
     $(".menu-bottom #navigation").insertAfter( $( "#carousel-wrapper" ) );
 }
+
 function switch_toggle(){
     $("button.navbar-toggle").click(function() {
          $(".navbar-collapse").toggleClass("list-open");
     });
 }
+
 /*get the existing doormat columns and translate them to the span grid system*/
 function getDoormatClass(){
     var col_class="";

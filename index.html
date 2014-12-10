@@ -16,20 +16,57 @@
 
         <!--CSS-->
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" type="text/css">
         <link rel="stylesheet" href="css/styles.css" type="text/css">
         <link rel="stylesheet" href="css/raw.css" type="text/css">
-
+        <link rel="stylesheet" href="css/palette.css" type="text/css">
+        <link rel="stylesheet" href="css/color-standard.css" type="text/css">
         <!--Jquery-->
         <script src="js/jquery.js"></script>
         <script src="js/support.js"></script>
+        <script src="js/palette.js"></script>
         <script>
             jq=$;
         </script>
         
     </head>
-    <body class="no-js">
+    <body class="no-js menu-palette">
         <div id="global-wrapper">
+            <div class="palette">
+                <div class="toggle-palette">
+                    <a>Toggle</a>
+                </div>
+                <div class="inner">
+                    <div class="headers">
+                        <h2>Header Styles</h2>
+                        <ul>
+                            <li>
+                                <a class="add-header-normal">Normal</a>
+                            </li>
+                            <li>
+                                <a class="add-header-dark">Dark</a>
+                            </li>
+                            <li>
+                                <a class="add-header-both">Both</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="colors">
+                        <h2>Color Style</h2>
+                        <ul>
+                            <li>
+                                <a class="red" href="css/k-vanilla-red.css">Red</a>
+                            </li>
+                            <li>
+                                <a class="green" href="css/k-vanilla-green.css">Green</a>
+                            </li>
+                            <li>
+                                <a class="yellow" href="css/k-vanilla-yellow.css">Yellow</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary reset" href="#">Reset default</a>
+                </div>
+            </div><!-- /.palette -->
         	<div id="wrapper-inner">
                 <div id="account-personaltools">
     	            <div class="container">
