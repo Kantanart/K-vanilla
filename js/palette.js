@@ -10,10 +10,6 @@ function Add_menu_bottom() {
      });
 }
 
-function clickHeaderclass(className) {
-    $('body').removeClass("header-dark header-light header-both header-normal").addClass(className);
-}
-
 function clickheaderaddclass() {
     $(".palette .headers ul li a.add-header-normal").click(function(){
         clickHeaderClass("header-normal")
@@ -39,6 +35,5 @@ $(document).ready(function() {
     Checkpalette();
     InitPalette();
     Add_menu_bottom();
-    clickHeaderclass();
     clickheaderaddclass();
 });

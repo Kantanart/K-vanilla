@@ -263,17 +263,17 @@ $(document).ready(function() {
             $(this).append('<h1 class="name-of-property">'+dictonary.title+'</h1>');
 
             //set location
-            $(this).append('<div class="location"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
+            $(this).append('<div class="status"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
            
-            $(this).append('<div class="title-price row" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
+            $(this).append('<div class="location" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
             if(dictonary.type=="house"){
-                $(this).append('<div class="bedrooms" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div><div class="bathrooms" />');    
+                $(this).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
             }
             else{
                 $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
             }
-             $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span><div class="price" >'+ dictonary.price +'</div></div>');
-            
+            $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
+            $(this).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
             
         });
 });

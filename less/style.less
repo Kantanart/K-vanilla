@@ -284,6 +284,74 @@ ul#portal-languageselector:hover li {
 .ie8 .col-md-12{
     width: 1170px;
 }
+//---- Listing Grid : Start----
+.propertyrow .name-of-property a {
+    font-size: @listing-name;
+    color: @listing-text-name;
+}
+.propertyrow .status a {
+    font-size: @listing-status;
+    color: @listing-text-status;
+}
+.propertyrow .location a {
+    font-size: @listing-other;
+    color: @listing-text-location;
+}
+.propertyrow .bedrooms a {
+    font-size: @listing-other;
+    color: @listing-text-other;
+}
+.propertyrow .area .value {
+    font-size: @listing-other;
+    color: @listing-text-other;
+}
+.propertyrow .price p {
+    font-size: @listing-price;
+    color: @listing-text-price;
+}
+.propertyrow .bedbath {
+    display: inline-block;
+    width: 60%;    
+    margin-bottom: 3px;
+}
+.propertyrow .status {
+    border-bottom: 1px dotted @listing-text-status;
+}
+.propertyrow .status a{
+    margin-left: 5px;
+}
+.propertyrow .location {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.propertyrow .bedbath .bathrooms {
+    background-image: url("../images/icons/bedbath.png");
+    padding: 13.5px 25.8px !important;
+    float: left;
+    background-position: -5px center;
+}
+.propertyrow .bedbath .value {
+    float: left;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.propertyrow .area .key {
+    background-image: url("../images/icons/area-icon.png");
+    margin-right: 6px;
+    padding: 4.4px 11.7px !important;
+}
+.propertyrow .area {
+     margin: 5px 0;
+     width: 60%;
+     float: left;
+}
+.propertyrow .price {
+    float: right;
+}
+.propertyrow .image .content a {
+    display: none !important; 
+}
+//---- Listing Grid : end ----
 @media (max-width: 1600px) and (min-width: 1301px) { 
     .listing #listing-info {
         float: right;
