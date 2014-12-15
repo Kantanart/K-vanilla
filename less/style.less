@@ -285,6 +285,9 @@ ul#portal-languageselector:hover li {
     width: 1170px;
 }
 //---- Listing Grid : Start----
+#global-wrapper .propertyrow {
+    margin-bottom: 15px;
+}
 .propertyrow .name-of-property a {
     font-size: @listing-name;
     color: @listing-text-name;
@@ -342,14 +345,28 @@ ul#portal-languageselector:hover li {
 }
 .propertyrow .area {
      margin: 5px 0;
-     width: 60%;
+     width: 44%;
      float: left;
 }
 .propertyrow .price {
     float: right;
 }
 .propertyrow .image .content a {
-    display: none !important; 
+    border: 1px solid #d5d5d5;
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.propertyrow .name-of-property {
+    margin: 0;
+}
+.propertyrow .image .content {
+    position: relative;
+}
+.propertyrow .image {
+    margin-right: 1% !important;
 }
 //---- Listing Grid : end ----
 @media (max-width: 1600px) and (min-width: 1301px) { 
@@ -422,6 +439,12 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
+    .propertyrow .name-of-property {
+        margin-top: 10px !important;
+    }
+    .propertyrow .body {
+        padding: 0 !important;
+    }
     .language-switcher{
         top: 0;
     }
@@ -471,6 +494,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
+    .propertyrow .name-of-property {
+        margin-top: 10px !important;
+    }
     .language-switcher{
         top: 0;
     }

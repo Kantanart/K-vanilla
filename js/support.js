@@ -74,6 +74,13 @@ function switch_toggle(){
     });
 }
 
+function improve_site_social() {
+    $(".site-social-swtich a").click(function(){
+        $(".site-social").toggleClass("site-close");
+        $(".site-social-swtich a").toggleClass("active");
+     });
+}
+
 /*get the existing doormat columns and translate them to the span grid system*/
 function getDoormatClass(){
     var col_class="";
@@ -200,6 +207,7 @@ function toggle_listing_type(){
 }
 
 $(document).ready(function() {
+    improve_site_social();
     switch_toggle();
     if($(".listing-search-tile.tile-content").length >0){
         toggle_listing_type();

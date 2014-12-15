@@ -47,14 +47,23 @@
         </rules>
         
         <rules css:if-content=".site_social_link">
-            <prepend
-                css:theme=".site-social"
-                css:content-children=".site_social_link"
+            <replace
+                css:theme=".site-social a.site-facebook"
+                css:content=".site_social_link a.facebook"
+            />
+            <replace
+                css:theme=".site-social a.site-twitter"
+                css:content=".site_social_link a.twitter"
+            />
+            <replace
+                css:theme=".site-social a.site-google"
+                css:content=".site_social_link a.google"
             />
             <drop
                 css:content=".site_social_link"
             />
         </rules>
+
 
         <rules css:if-content=".site_contact_phone">
             <prepend
