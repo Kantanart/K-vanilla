@@ -101,7 +101,7 @@
         </rules>
 
         <replace
-            css:theme=".site-search"
+            css:theme=".searchbox"
             css:content="#portal-searchbox"
         />
 

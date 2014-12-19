@@ -144,6 +144,9 @@ ul#content-views li{
 .actionMenu dd.actionMenuContent{
     z-index: 10;
 }
+#carousel-wrapper {
+    margin-top: 15px;
+}
 .logo-wrapper .info{
     max-width: 100%;
 }
@@ -178,6 +181,24 @@ body .account li{
 }
 fieldset{
     border: medium none !important;
+}
+.listingBar span.active {
+    border: 0.1em solid @color-link;
+    padding: 0.65em 0.75em 0.5em;
+    background-color: @color-link !important;
+}
+.listingBar span.active span{
+    font-size: 14px !important;
+    color: #fff;
+    background-color: @color-link !important;
+}
+div.listingBar a:hover{
+    background-color: @color-link !important;
+    border-color: @color-link !important;
+}
+.header-special {
+    float: left;
+    width: 50%;
 }
 ul#portal-languageselector li.currentLanguage{
     display: block;
@@ -368,6 +389,14 @@ ul#portal-languageselector:hover li {
 .propertyrow .image {
     margin-right: 1% !important;
 }
+.listing-summary .row #search-form p#show-form a {
+    font-size: @2h-size;
+    font-weight: bold;
+}
+.listing-summary .row #search-form p#show-form{
+    margin-top: 10px;
+}
+
 //---- Listing Grid : end ----
 @media (max-width: 1600px) and (min-width: 1301px) { 
     .listing #listing-info {

@@ -1,19 +1,22 @@
 @import "command.less";
 
-#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:hover,#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:focus {
-
-}
 #navigation #id_nav1 ul.navmenu li a {
     .add-style-of-navbar-button-text;
 }
+#navigation #id_nav1 ul.navmenu li a:hover, #navigation #id_nav1 ul.navmenu li a:focus {
+    .add-style-of-navbar-button-text-hover !important;
+}
 #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
+    background: transparent !important;
     box-shadow: none !important;
     text-decoration: none !important;
 }
 label.horizontal.collapser.collapsed {
+    background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     padding-right: 14px;
 }
 label.horizontal.collapser.expanded {
+    background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0);
     padding-right: 14px;
 }
 #portal-searchbox #LSResult {
@@ -29,6 +32,9 @@ label.horizontal.collapser.expanded {
 #navigation #id_nav1 ul.navmenu li ul.submenu li a {
     padding: 6px;
     white-space: nowrap;
+}
+.navbar-toggle .icon-bar{
+    background: none repeat scroll 0 0 gray;
 }
 #navigation #id_nav1.navbar-collapse {
     .add-main-of-navbar;
@@ -61,72 +67,17 @@ label.horizontal.collapser.expanded {
 #footer-wrapper #colophone .colophone-inner{
     padding-top: 10px;
 }
-a.facebook:hover ,a.facebook:focus {
-    padding-right: 30px !important;
-}
-a.twitter:hover ,a.twitter:focus {
-    padding-right: 30px !important;
-}
-a.google:hover ,a.google:focus {
-    padding-right: 30px !important;
-}
-.site-social-swtich a.active{
-    background-image: url("../images/arrow-right-black.png");
-}
-.site-social-swtich {
-    position: fixed;
-    top: 210px;
-    z-index: 9999;
-    a {
-        background-image: url("../images/arrow-left-black.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 8px 11px;
-        display: block;
-        height: 40px;
-        width: 40px;
-    }
-}
-#global-wrapper .site-social.site-close {
-    left: -60px;
-}
 .site-social {
-    left: 0;
-    position: fixed;
-    top: 250px;
-    z-index: 9999;
-    display: block;
-    width: 6%;
-    .transition;
-    a.facebook {
-        background-image: url("../images/icons/fb.png");
-        padding: 17px 23px;
-        float: left;
-        width: auto;
-        .transition;
-    }
-    a.twitter {
-        background-image: url("../images/icons/twitter.png");
-        padding: 17px 23px;
-        float: left;
-        width: auto;
-        .transition;
-    }
-    a.google {
-        background-image: url("../images/icons/google.png");
-        padding: 17px 23px;
-        float: left;
-        width: auto;
-        .transition;
-    }
+    float: right;
+    width: auto;
 }
 .site-email {
-    float: right;
+    float: left;
     width: auto;
     margin-left: 40px;
 }
 .site-phone {
-    float: right;
+    float: left;
     width: auto;
     margin-left: 40px;
 }
@@ -135,13 +86,12 @@ a.google:hover ,a.google:focus {
     max-width: 100%;
 }
 .logo-wrapper .info{
-    float: right;
-    margin-top: 15px;
+    float: left;
 }   
 #portal-searchbox {
-    bottom: 0;
+    left: 77%;
     position: absolute;
-    right: 0;
+    top: 192px;
 }
 @media (max-width: 1600px) and (min-width: 1301px) { 
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
@@ -205,34 +155,11 @@ a.google:hover ,a.google:focus {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {    
-    .language-switcher #portal-languageselector{
-        top: -5px;
-    }
     .navbar-collapse .navmenu li ul.submenu {
         position: static;
         .transition;
-    }
-    .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
-        border-left: 1px solid !important;
-        border-right: 1px solid !important;
-    }
-    #navigation #id_nav1 ul.navmenu li ul.submenu {
-        position: absolute;
-        top: 38px;
-    }
-    #navigation #id_nav1 ul.navmenu li ul.submenu .submenu {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
-         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
-         padding-right: 16px;
-    }
-    #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
-         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
-         padding-right: 16px;
-         border: none !important;
+        border-left: 8px solid !important;
+        border-right: 8px solid !important;
     }
     .navbar-collapse .navmenu li ul.submenu li a:hover,.navbar-collapse .navmenu li ul.submenu li a:focus {
         border-left: 1px solid !important;
@@ -263,12 +190,10 @@ a.google:hover ,a.google:focus {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
-    .language-switcher #portal-languageselector{
-        top: -5px;
-    }
     #navigation #id_nav1 ul.navmenu li ul.submenu {
         position: absolute;
         top: 38px;
+        left: 121px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .submenu {
         position: relative;
@@ -276,9 +201,11 @@ a.google:hover ,a.google:focus {
         left: 0;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown {
+         background: url("../images/arrow-bottom-black.png") no-repeat scroll right center rgba(0, 0, 0, 0);
          padding-right: 16px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:hover, #navigation #id_nav1 ul.navmenu li ul.submenu .hasDropDown:focus {
+         background: url("../images/arrow-bottom-black-90.png") no-repeat scroll right center rgba(0, 0, 0, 0) !important;
          padding-right: 16px;
          border: none !important;
     }
