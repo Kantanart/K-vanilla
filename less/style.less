@@ -1,3 +1,5 @@
+@import "color.less";
+@import "font.less";
 @import "command.less";
 
 #content .portlet-both,
@@ -5,45 +7,19 @@
 #content .portlet-left {
     margin:0;
 }
-#global-wrapper {
-    #wrapper-inner {
-        #account-personaltools {
-        }
-        #header {
-        }
-        #navigation {
-            .container {
-                position: relative;
-                #id_nav1 {
-                    ul.navmenu {;
-                        li {
-                            a {
-                                &:hover,&:focus{
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .navbar-header {
-                button.btn {
-                    float: left;
-                    margin-left: 26px;
-                }
-            }
-        }
-    }
-    #content {
-    }
+#navigation #id_nav1 ul.navmenu li:hover> ul.submenu {
+    display: block;
 }
-
 img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
 }
-#navigation #id_nav1 ul.navmenu li:hover> ul.submenu {
-    display: block;
+.portlet .portletHeader .managedPortletActions{
+    font-size: 14px !important;
+}
+.managedPortlet.portlet .portletHeader {
+    font-size: 14px !important;
 }
 .template-manage-portlets #maincontent #viewlet-above-content .carousel {
     display: none;
@@ -67,6 +43,18 @@ img {
 #viewlet-above-content .carousel .carousel-banners {
     width: 100% !important;
 }
+.portlet.portletCalendar .portletHeader {
+    font-size: 1.4em;
+}
+.portlet .portletHeader {
+    font-size: 30px;
+}
+dl.portlet dt.portletHeader {
+    background: @color-background-portlet-header;
+}
+.portlet .ploneCalendar .weekdays th {
+    background: @color-background-portlet-calendar;
+}
 .row {
     margin: 0;
 }
@@ -80,47 +68,133 @@ ul#content-views {
     float: left;
 }
 .breadcrumb-wrapper .breadcrumb li span a,.breadcrumb-wrapper .breadcrumb li span span {
+    color: @color-text-breadcrumb;
     text-decoration: none !important;
 }
 .breadcrumb-wrapper .breadcrumb a:hover {
+    color: @color-text-breadcrumb-hover;
     text-decoration: none !important;
 }
 #portal-breadcrumbs {
     margin-bottom: 10px;
     font-weight: bolder;
 }
+body .documentFirstHeading {
+    color: @color-first-heading;
+}
+strong {
+    color: @color-of-strong;
+}
+body h1 {
+    color: @color-h1;
+    font-size: @add-font-size-1h;
+}
+#content h2 {
+    color: @color-h2;
+    font-size: @add-font-size-2h;
+}
+body h3 {
+    color: @color-h3;
+    font-size: @add-font-size-3h;
+}
+body h4 {
+    color: @color-h4;
+    font-size: @add-font-size-4h;
+}
+body p {
+    color: @color-p;
+    font-size: @add-font-size-p;
+}
+body a {
+    color: @color-link;
+    font-size: @add-font-size-link;
+}
 body a:hover,#content a:focus {
+    color: @color-link-hover;
     text-decoration: none !important;
 }
-#footer-wrapper {
-    #footer-top {
-        #footer-top-inner {
-                h2{
+label.horizontal{
+    color: @color-label-horizontal;
+    color: @add-font-size-label-horizon;
+}
+span.label{
+    color: @color-span;
+    font-size: @add-font-size-span;
+}
+span.carousel-title {
+    font-size: @add-font-size-carousel-title;
+}
+.form-rows ul.formTabs li.formTab a span {
+    color: @color-span-form;
+}
+#recent-listings .tileItem h2.tileHeadline a {
+    font-size: @add-font-size-header-recent;
+    color: @color-header-recent;
+}
+#footer-top {
+    background-color: @color-background-footer;
+    #footer-top-inner {
+        background-color: @color-background-footer-inner;
+            h2{
+                color: @color-h2-doormat;
+            }
+            .doormatColumn {
+                h3{
+                    color: @color-h3-section;
                 }
-                .doormatColumn {
-                    h3{
-                    }
-                    .doormatSection {
-                        .doormatSectionHeader {
-                        }
+                .doormatSection {
+                    color: @color-doormat;
+                    .doormatSectionHeader {
+                        color: @color-SectionHeader;
                     }
                 }
-        }
+            }
     }
-    #colophone {
-        .colophone-inner {
-             a {
-                &:hover,&:focus{
-                    text-decoration: none !important;
-                }
-            }        
-        }
+}
+#colophone {
+    background-color: @color-background-colophone;
+    .colophone-inner {
+        background-color: @color-background-colophone-inner;
+        color: @color-colophone;
+         a {
+            color: @color-link-colophone; 
+            &:hover,&:focus{
+                color: @color-link-colophone-hover; 
+                text-decoration: none !important;
+            }
+        }        
     }
 }
 #content .documentDescription{
     color: @color-of-description;
 }
-
+#navigation {
+    background-color: @color-background-menu !important;
+    #id_nav1 {
+        background-color: @color-background-menu !important;
+        ul.navmenu {
+            background-color: @color-background-menu !important;
+            li {
+                background-color: @color-background-menu !important;
+                a {
+                    font-size: @add-font-size-menu;
+                    background-color: @color-background-menu-button;
+                    color: @color-font-menu !important;
+                    &:hover,&:focus{
+                        background-color: @color-background-menu-button-hover;
+                        color: @color-font-menu-hover !important;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-header {
+        button.btn {
+            float: left;
+            margin-left: 26px;
+        }
+    }
+}
 ul#content-views li{
     display: inline;
     margin: 0;
@@ -143,9 +217,6 @@ ul#content-views li{
 }
 .actionMenu dd.actionMenuContent{
     z-index: 10;
-}
-#carousel-wrapper {
-    margin-top: 15px;
 }
 .logo-wrapper .info{
     max-width: 100%;
@@ -182,24 +253,6 @@ body .account li{
 fieldset{
     border: medium none !important;
 }
-.listingBar span.active {
-    border: 0.1em solid @color-link;
-    padding: 0.65em 0.75em 0.5em;
-    background-color: @color-link !important;
-}
-.listingBar span.active span{
-    font-size: 14px !important;
-    color: #fff;
-    background-color: @color-link !important;
-}
-div.listingBar a:hover{
-    background-color: @color-link !important;
-    border-color: @color-link !important;
-}
-.header-special {
-    float: left;
-    width: 50%;
-}
 ul#portal-languageselector li.currentLanguage{
     display: block;
     background-image: url("../images/arrow-bottom-black.png");
@@ -213,18 +266,11 @@ ul#portal-languageselector:hover li {
     margin: 0;
     padding: 0;
 }
-.header-light #portal-personaltools-wrapper dt.actionMenuHeader {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 .language-switcher {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    float: right;
     margin: 13px 0 11px;
-    position: absolute;
-    right: 2%;
+    position: relative;
     #portal-languageselector {
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         position: absolute;
@@ -262,9 +308,6 @@ ul#portal-languageselector:hover li {
 }
 .language-switcher #portal-languageselector li.language-ru a{
     background-image: url("../images/flags/ru.png");
-}
-.language-switcher #portal-languageselector li.language-de a{
-    background-image: url("../images/flags/de.png");
 }
 .ie8 .col-md-1{
     width: 70px;
@@ -305,99 +348,6 @@ ul#portal-languageselector:hover li {
 .ie8 .col-md-12{
     width: 1170px;
 }
-//---- Listing Grid : Start----
-#global-wrapper .propertyrow {
-    margin-bottom: 15px;
-}
-.propertyrow .name-of-property a {
-    font-size: @listing-name;
-    color: @listing-text-name;
-}
-.propertyrow .status a {
-    font-size: @listing-status;
-    color: @listing-text-status;
-}
-.propertyrow .location a {
-    font-size: @listing-other;
-    color: @listing-text-location;
-}
-.propertyrow .bedrooms a {
-    font-size: @listing-other;
-    color: @listing-text-other;
-}
-.propertyrow .area .value {
-    font-size: @listing-other;
-    color: @listing-text-other;
-}
-.propertyrow .price p {
-    font-size: @listing-price;
-    color: @listing-text-price;
-}
-.propertyrow .bedbath {
-    display: inline-block;
-    width: 60%;    
-    margin-bottom: 3px;
-}
-.propertyrow .status {
-    border-bottom: 1px dotted @listing-text-status;
-}
-.propertyrow .status a{
-    margin-left: 5px;
-}
-.propertyrow .location {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-.propertyrow .bedbath .bathrooms {
-    background-image: url("../images/icons/bedbath.png");
-    padding: 13.5px 25.8px !important;
-    float: left;
-    background-position: -5px center;
-}
-.propertyrow .bedbath .value {
-    float: left;
-    margin-left: 10px;
-    margin-top: 4px;
-}
-.propertyrow .area .key {
-    background-image: url("../images/icons/area-icon.png");
-    margin-right: 6px;
-    padding: 4.4px 11.7px !important;
-}
-.propertyrow .area {
-     margin: 5px 0;
-     width: 44%;
-     float: left;
-}
-.propertyrow .price {
-    float: right;
-}
-.propertyrow .image .content a {
-    border: 1px solid #d5d5d5;
-    display: block;
-    height: 100%;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-}
-.propertyrow .name-of-property {
-    margin: 0;
-}
-.propertyrow .image .content {
-    position: relative;
-}
-.propertyrow .image {
-    margin-right: 1% !important;
-}
-.listing-summary .row #search-form p#show-form a {
-    font-size: @2h-size;
-    font-weight: bold;
-}
-.listing-summary .row #search-form p#show-form{
-    margin-top: 10px;
-}
-
-//---- Listing Grid : end ----
 @media (max-width: 1600px) and (min-width: 1301px) { 
     .listing #listing-info {
         float: right;
@@ -468,15 +418,6 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
-    .propertyrow .name-of-property {
-        margin-top: 10px !important;
-    }
-    .propertyrow .body {
-        padding: 0 !important;
-    }
-    .language-switcher{
-        top: 0;
-    }
      .listing #listing-info {
         bottom: -427px;
         width: 100%;
@@ -487,16 +428,16 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }      
-    #maincontent #content .listing-summary figure a {
+    .documentEditable #content .listing-summary figure a {
         text-align: center;
     }
-    #maincontent #content .listing-summary figure img {
+    .documentEditable #content .listing-summary figure img {
         width: auto;
     }
-    #maincontent #content .listing-summary figure {
+    .documentEditable #content .listing-summary figure {
         width: 100%;
     }
-    #maincontent #content .listing-summary section {
+    .documentEditable #content .listing-summary section {
         width: 100%;
     }   
     #global-wrapper tbody tr td p .image-inline{
@@ -523,12 +464,6 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
-    .propertyrow .name-of-property {
-        margin-top: 10px !important;
-    }
-    .language-switcher{
-        top: 0;
-    }
       .listing #listing-info {
         bottom: -418px;
         width: 100%;
@@ -539,16 +474,16 @@ ul#portal-languageselector:hover li {
         top: -288px;
         width: 412px;
     }     
-    #maincontent #content .listing-summary figure a {
+    .documentEditable #content .listing-summary figure a {
         text-align: center;
     }
-    #maincontent #content .listing-summary figure img {
+    .documentEditable #content .listing-summary figure img {
         width: auto;
     }
-    #maincontent #content .listing-summary figure {
+    .documentEditable #content .listing-summary figure {
         width: 100%;
     }
-    #maincontent #content .listing-summary section {
+    .documentEditable #content .listing-summary section {
         width: 100%;
     }
     #global-wrapper tbody tr td p .image-inline{

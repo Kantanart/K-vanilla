@@ -1,3 +1,61 @@
+function is_ListingRowPage(){
+    //returns true or false if the the page is Listing Summary
+    if($('section.listing-summary').length>0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function setup_ListingSummary(){
+    // we do this only ONE time and add classes to $(".listing-summary")
+    $(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
+    $(".listing-summary .tileItem").addClass('property ').wrapInner('<div class="row propertyrow" />');
+    $(".listing-summary .property .row figure").addClass('image col-md-3').wrapInner('<div class="content" />');
+    $( ".listing-summary .property .row .image .content a" ).each(function( index ) {
+        child = $(this).children('img');
+        $(this).empty().after(child);
+    });
+    //...
+}
+function is_improvedListing(listing){
+/* 
+    return true if we changed this listing already
+    return false if we need to change it
+    ...
+*/
+    if($(listing).find('.improved').length>0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function improveListing(listing){
+    // changes html of ONE listing
+    dictonary = map_listing_data($(listing).children('dl'));
+    dictonary.title =$(listing).siblings('.tileHeadline').html();
+    dictonary.linktarget= $(listing).parent().find('a:first').attr('href');
+    $(listing).addClass('improved');
+    $(listing).siblings('.tileHeadline').remove();
+    //clear existing detail structure
+    $(listing).empty();
+    //set price & title
+    $(listing).append('<h1 class="name-of-property">'+dictonary.title+'</h1>');
+    //set location
+    $(listing).append('<div class="status"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
+    $(listing).append('<div class="location" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
+    $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
+    $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
+        if(dictonary.type=="house"){
+            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
+        }
+        else{
+            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
+        }     
+}
+
 /*Improve listing bar*/
 function enhance_listingbar(){
     //remove the ugly [ 1 ] notation and give it a class
@@ -273,21 +331,27 @@ function toggle_listing_type(){
         }
     });
 }
+
+
 $(document).ready(function() {
-    $( document ).ajaxComplete(function() { 
-        console.log("AjaxComplate : Working");
-        $('section dl').each(function(){
-            if($(this).length>0){
-                // old style
-                improve_listing_grid();
-                enhance_listiggrid(); 
-         }
-        })
-    })
+    // Listing Grid 
+    if (is_ListingRowPage()) {
+        // set classes
+        setup_ListingSummary();
+        //change Listings
+        $(".listing-summary .property .row section").each(function(index){
+            if(!is_improvedListing($(this))){
+                improveListing($(this));
+            }
+        });
+
+
+    }
     // only do when we have a listingbar
     if($('.listingBar').length > 0){
         enhance_listingbar();
     }
+    
     improve_site_social();
     switch_toggle();
     if($(".listing-search-tile.tile-content").length >0){
@@ -302,11 +366,15 @@ $(document).ready(function() {
         $("#footer-top-inner .doormatColumn").addClass(doormat_col_class);
     }
 
-    //listing grid
-    if($(".listing-collection-tile").length>0){
-        //prepare listing grid
-        enhance_listiggrid();      
-    }
-    improve_listing_grid();
+});
+
+//6) Ajax Complete
+$( document ).ajaxComplete(function() {
+    //change Listings after Ajax
+    $(".listing-summary .property .row section").each(function(index){
+         if(!is_improvedListing($(this))){
+            improveListing($(this));
+        }
+    });
 });
 
