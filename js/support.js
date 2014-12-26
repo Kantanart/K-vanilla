@@ -10,12 +10,6 @@ function is_ListingRowPage(){
 function setup_ListingSummary(){
     // we do this only ONE time and add classes to $(".listing-summary")
     $(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
-    $(".listing-summary .tileItem").addClass('property ').wrapInner('<div class="row propertyrow" />');
-    $(".listing-summary .property .row figure").addClass('image col-md-3').wrapInner('<div class="content" />');
-    $( ".listing-summary .property .row .image .content a" ).each(function( index ) {
-        child = $(this).children('img');
-        $(this).empty().after(child);
-    });
     //...
 }
 function is_improvedListing(listing){
@@ -31,13 +25,46 @@ function is_improvedListing(listing){
         return false;
     }
 }
-
-function improveListing(listing){
+function improve_img_row(){
+    $( ".property .image .content a" ).each(function( index ) {
+        child = $(this).children('img');
+        $(this).empty().after(child);
+    });
+}
+function add_class_improvelisting(){
+    $(".listing-summary .tileItem").addClass('property').wrapInner('<div class="row" />');
+    $(".listing-summary .property figure").addClass('image col-md-3').wrapInner('<div class="content" />');
+}
+function ajax_improveListing(listing){
     // changes html of ONE listing
+    $(listing).addClass('improved');
     dictonary = map_listing_data($(listing).children('dl'));
     dictonary.title =$(listing).siblings('.tileHeadline').html();
     dictonary.linktarget= $(listing).parent().find('a:first').attr('href');
+    $(listing).siblings('.tileHeadline').remove();
+    //clear existing detail structure
+    $(listing).empty();
+    //set price & title
+    $(listing).append('<h1 class="name-of-property">'+dictonary.title+'</h1>');
+    //set location
+    $(listing).append('<div class="status"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
+    $(listing).append('<div class="location" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
+    $(listing).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
+    $(listing).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
+        if(dictonary.type=="house"){
+            $(listing).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
+        }
+        else{
+            $(listing).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
+        }     
+}
+
+function improveListing(listing){
+    // changes html of ONE listing
     $(listing).addClass('improved');
+    dictonary = map_listing_data($(listing).children('dl'));
+    dictonary.title =$(listing).siblings('.tileHeadline').html();
+    dictonary.linktarget= $(listing).parent().find('a:first').attr('href');
     $(listing).siblings('.tileHeadline').remove();
     //clear existing detail structure
     $(listing).empty();
@@ -130,6 +157,7 @@ function enhance_listiggrid(){
     
 }
 
+
 /*Move menu to under add class "menu-bottom" in body */
 function move_menubar(){
     $(".menu-bottom #navigation").insertAfter( $( "#carousel-wrapper" ) );
@@ -142,9 +170,9 @@ function switch_toggle(){
 }
 
 function improve_site_social() {
-    $(".site-social-swtich a").click(function(){
+    $(".site-social-switch a").click(function(){
         $(".site-social").toggleClass("site-close");
-        $(".site-social-swtich a").toggleClass("active");
+        $(".site-social-switch a").toggleClass("active");
      });
 }
 
@@ -178,66 +206,7 @@ function getDoormatClass(){
     
     return col_class;
 }
-function improve_listing_grid(){
-    //listing row
-    var width_indicator = $('#maincontent').attr('class');
-    switch(width_indicator) {
-        case 'span12':
-            //no portlet
-            text_width_indicator = 'col-md-9';
-            title_width_indicator = 'col-md-6';
-            price_width_indicator = 'col-md-3';
-            break;
-        case 'span9':
-            // one portlet
-            text_width_indicator = 'col-md-6';
-            title_width_indicator = 'col-md-4';
-            price_width_indicator = 'col-md-2';
-            break;
-        case 'span6':
-            //two portlets
-            text_width_indicator = 'col-md-3';
-            title_width_indicator = 'col-md-2';
-            price_width_indicator = 'col-md-1';
-            break;
-        default:
-            text_width_indicator = 'col-md-6';
-    }
-        $(".listing-summary").addClass('properties-rows').wrapInner('<div class="row" />');
-        $(".listing-summary .tileItem").addClass('property ' + width_indicator).wrapInner('<div class="row propertyrow" />');
-        $(".listing-summary .property .row figure").addClass('image span3').wrapInner('<div class="content" />');
-        // move image out of parent link
-        $( ".listing-summary .property .row .image .content a" ).each(function( index ) {
-            child = $(this).children('img');
-            $(this).empty().after(child);
-        });
-        //prepare listing text
-        $(".listing-summary .property .row section").addClass('body ' + text_width_indicator);
-        $( ".listing-summary .property .row .body" ).each(function( index ) {
-            dictonary = map_listing_data($(this).children('dl'));
-            dictonary.title =$(this).siblings('.tileHeadline').html();
-            dictonary.linktarget= $(this).parent().find('a:first').attr('href');
-            $(this).siblings('.tileHeadline').remove();
-            //clear existing detail structure
-            $(this).empty();
-            //set price & title
-            $(this).append('<h1 class="name-of-property">'+dictonary.title+'</h1>');
 
-            //set location
-            $(this).append('<div class="status"><a href="'+ dictonary.linktarget +'">'+dictonary.loctype+' '+dictonary.propertytype+' - '+ dictonary.listingtype +'</a></div>');
-           
-            $(this).append('<div class="location" ><div class="title"><a href="'+ dictonary.linktarget +'">'+dictonary.location+'</a></div></div>');
-            if(dictonary.type=="house"){
-                $(this).append('<div class="bedbath"><div class="bathrooms"></div><div class="value" title="Bedroom and Bathroom" >'+dictonary.bedbath+'</div></div>');    
-            }
-            else{
-                $(this).append('<div class="locationtype"><span class="key" title="Location Type" >&nbsp</span><span class="value">'+dictonary.locationtype+'</span></div>');   
-            }
-            $(this).append('<div class="area"><span class="key" title="Area" >&nbsp</span><span class="value">'+dictonary.area+'</span></div>');
-            $(this).append('<div class="price"><p class="value" >'+ dictonary.price +'</p></div>');
-            
-        });    
-}
 /*Switch Cover page - Listing search */
 function toggle_listing_type(){
     $(".listing-search-tile #formfield-form-widgets-jacuzzi span").hide('slow');
@@ -334,19 +303,32 @@ function toggle_listing_type(){
 
 
 $(document).ready(function() {
-    // Listing Grid 
+
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();
         //change Listings
-        $(".listing-summary .property .row section").each(function(index){
+        $(".tileItem section").each(function(index){
             if(!is_improvedListing($(this))){
                 improveListing($(this));
             }
         });
-
-
     }
+
+    // Ajax Complete
+    $( document ).ajaxComplete(function() {
+        if (is_ListingRowPage()) {
+            //change Listings
+            $(".tileItem section:not(.improved)").each(function(index){
+                if(!is_improvedListing($(this))){
+                    ajax_improveListing($(this));
+                    console.log("Ajax : End");
+                }
+            });
+        }
+    });
+
+
     // only do when we have a listingbar
     if($('.listingBar').length > 0){
         enhance_listingbar();
@@ -366,15 +348,8 @@ $(document).ready(function() {
         $("#footer-top-inner .doormatColumn").addClass(doormat_col_class);
     }
 
+
 });
 
-//6) Ajax Complete
-$( document ).ajaxComplete(function() {
-    //change Listings after Ajax
-    $(".listing-summary .property .row section").each(function(index){
-         if(!is_improvedListing($(this))){
-            improveListing($(this));
-        }
-    });
-});
+
 
