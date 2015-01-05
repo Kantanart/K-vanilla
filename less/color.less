@@ -55,6 +55,7 @@
     @color-account: #fff;
     @color-menu: #707070;
     @color-header-listing: #248e00;
+    @color-carousel-title: #fff;
 // ----- Background - Start -----
     // ----- Listing Grid -----
     @listing-text-name: @color-link;
@@ -168,7 +169,10 @@
         background-color: @bg-content;
     }
 }
-
+.mlsec_latest-listings .listing-collection-tile .collection-item .price .item-body {
+    font-size: @2h-size !important;
+    color: @color-link !important;
+}
 .portlet .portletHeader .managedPortletActions{
     font-size: 14px !important;
 }
@@ -236,6 +240,8 @@ span.label{
 }
 span.carousel-title {
     font-size: @add-font-size-carousel-title;
+    color: @color-carousel-title;
+    font-weight: bold;
 }
 .form-rows ul.formTabs li.formTab a span {
     color: @color-span-form;

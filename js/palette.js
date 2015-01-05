@@ -6,7 +6,7 @@ function InitPalette() {
 
 function reset_btn(){
     $(".palette a.reset").click(function() {
-        alert("Not enabled.");
+        $( "#navigation" ).insertAfter( "#header" );
     });
 }
 

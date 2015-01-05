@@ -3,6 +3,33 @@
 #global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:hover,#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:focus {
 
 }
+.mlsec_latest-listings .listing-collection-tile .collection-item .price .item-heading {
+    display: none;
+}
+.mlsec_latest-listings .listing-collection-tile .collection-item .beds_baths .item-heading {
+    background-image: url("../images/icons/bedbath.png");
+    background-position: -5px center;
+    height: 20px;
+    margin-right: 10px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    width: 55px !important;
+}
+.mlsec_latest-listings .listing-collection-tile .collection-item .beds_baths {
+    margin-top: 5px;
+}
+.mlsec_latest-listings .listing-collection-tile .collection-item .location .item-heading {
+    background-image: url("../images/icons/bubble-address.png");
+    background-position: -10px center;
+    height: 22px;
+    margin-right: 3px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    width: 28px !important;
+}
+.mlsec_latest-listings .listing-collection-tile .collection-item .location {
+    margin-top: 5px;
+}
 #navigation #id_nav1 ul.navmenu li a {
     .add-style-of-navbar-button-text;
 }
@@ -71,22 +98,19 @@ a.google:hover ,a.google:focus {
     padding-right: 30px !important;
 }
 .site-social-switch a.active{
-    background-image: url("../images/arrow-right-black.png");
+    background-image: url("../images/social-hide.png");
 }
 .site-social-switch {
     position: fixed;
-    top: 210px;
+    top: 411px;
     z-index: 9999;
     a {
-        background-image: url("../images/arrow-left-black.png");
+        background-image: url("../images/social-show.png");
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: 8px 11px;
+        background-size: 48px 20px;
         display: block;
-        height: 40px;
         width: 40px;
-        border: 2px solid #ddd;
-        border-radius: 28px;
     }
 }
 #global-wrapper .site-social.site-close {
@@ -123,21 +147,31 @@ a.google:hover ,a.google:focus {
     }
 }
 .site-email {
-    float: right;
+    background-image: url("../images/icons/mail-gray.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 17px 11px;
+    float: left;
+    margin-left: 77px;
+    padding-left: 24px;
     width: auto;
-    margin-left: 40px;
 }
 .site-phone {
-    float: right;
+    background-image: url("../images/icons/cell-phone-gray.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 12px 20px;
+    float: left;
+    margin-left: 94px;
+    padding-left: 17px;
     width: auto;
-    margin-left: 40px;
 }
 .logo-wrapper .logo {
     float: left;
     max-width: 100%;
 }
 .logo-wrapper .info{
-    float: right;
+    float: left;
     margin-top: 15px;
 }   
 #portal-searchbox {
@@ -173,14 +207,22 @@ a.google:hover ,a.google:focus {
     }
     .portaltype-collective-cover-content .cell.width-10.position-0 {
         width: 59%;
-        }
+    }
 }
 @media (max-width: 1200px) and (min-width: 981px) {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
         padding-left: 15px;
     }
     .logo-wrapper .info{
-        width: 50%;
+        width: 480px;
+    }
+    .site-phone {
+        padding-left: 24px !important;
+        margin-left: 35px !important;
+    }
+    .site-email {
+        margin-left: 35px !important;
+        padding-left: 26px !important;
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
@@ -194,6 +236,14 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         left: 69%
     }
+    .site-phone {
+        padding-left: 24px !important;
+        margin-left: 35px !important;
+    }
+    .site-email {
+        margin-left: 35px !important;
+        padding-left: 26px !important;
+    }
 }
 @media (max-width: 800px) and (min-width: 768px) {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
@@ -205,10 +255,18 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         left: 70%
     }
+    .site-phone {
+        padding-left: 24px !important;
+        margin-left: 35px !important;
+    }
+    .site-email {
+        margin-left: 35px !important;
+        padding-left: 26px !important;
+    }
 }
 @media (max-width: 767px) and (min-width: 481px) {    
     .language-switcher #portal-languageselector{
-        top: -5px;
+        top: -8px;
     }
     .navbar-collapse .navmenu li ul.submenu {
         position: static;
@@ -263,10 +321,26 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         display: none;
     }
+    .site-phone {
+        padding-left: 24px !important;
+        margin-left: 35px !important;
+        width: 142px;
+    }
+    .site-email {
+        margin-left: 14px !important;
+        padding-left: 26px !important;
+        width: 180px;
+    }
+    .logo-wrapper .info .site-phone {
+        float: left !important;
+    }
+    .logo-wrapper .info .site-email {
+        float: left !important;    
+    }
 }
 @media (max-width: 480px) and (min-width: 1px) {
     .language-switcher #portal-languageselector{
-        top: -5px;
+        top: -8px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu {
         position: absolute;
@@ -315,5 +389,13 @@ a.google:hover ,a.google:focus {
     }
     .documentEditable #content .listing-summary figure img {
         width: 100% !important;
+    }
+    .site-phone {
+        padding-left: 24px !important;
+        margin-left: 35px !important;
+    }
+    .site-email {
+        margin-left: 35px !important;
+        padding-left: 26px !important;
     }
 }
