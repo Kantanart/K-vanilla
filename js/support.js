@@ -300,10 +300,11 @@ function toggle_listing_type(){
         }
     });
 }
-
-
+function class_print_listing(){
+    Print = $( ".listing.detail p:contains('Print Listing')" );
+    $(Print).addClass("print-listing");
+}
 $(document).ready(function() {
-
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();
@@ -332,6 +333,10 @@ $(document).ready(function() {
     // only do when we have a listingbar
     if($('.listingBar').length > 0){
         enhance_listingbar();
+    }
+    
+    if($('.listing.detail').length > 0){
+        class_print_listing();
     }
     
     improve_site_social();

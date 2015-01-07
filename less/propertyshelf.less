@@ -1,10 +1,47 @@
 @import "command.less";
 
-#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:hover,#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:focus {
-
+#global-wrapper div.formControls {
+    text-align: left;
+    margin: auto 0;
+}
+#content .listing.detail .print-listing {
+    margin-bottom: 20px;
+}
+#content .listing.detail .print-listing a {
+    background-image: url("../images/icons/Print-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    font-weight: bold;
+    padding: 8px 13px 8px 32px;
+    .transition;
+}
+#content .listing.detail .print-listing a:hover {
+    border-bottom: 3px solid;
+    border-top: 3px solid;
 }
 .mlsec_latest-listings .listing-collection-tile .collection-item .price .item-heading {
     display: none;
+}
+.doormat-location .dm-address,.doormat-location .dm-mobile,.doormat-location .dm-office,.doormat-location .dm-email,.doormat-location .dm-skype {
+    font-weight: bold;
+    display: inline-flex;
+    width: 100%;
+}
+.doormat-location div p,.doormat-location div a {
+    font-weight: normal !important;
+    margin-bottom: 3px;
+}
+#content dl.portlet dd.portletItem, #content dl.portlet dd.portletFooter, #content dl.portletError dd {
+    padding: 0;
+}
+#content .portletAgentInformation .portletHeader , #content .portletAgentContact .portletHeader {
+    margin-bottom: 10px;
+    padding: 0;
+}
+#content .portletAgentInformation .portletItem .contact_details {
+    margin-top: 0;
 }
 .mlsec_latest-listings .listing-collection-tile .collection-item .beds_baths .item-heading {
     background-image: url("../images/icons/bedbath.png");
