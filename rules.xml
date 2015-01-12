@@ -206,7 +206,7 @@
             css:if-not-content="#portal-column-two"
         />
         <replace
-            css:theme-children=".portlet-left #portlet-left"
+            css:theme-children=".portlet-left #portlet-left .inner-portlet-left"
             css:content-children="#portal-column-one"
             css:if-content="#portal-column-one"
             css:if-not-content="#portal-column-two"
@@ -235,7 +235,7 @@
             css:if-not-content="#portal-column-one"
         />
         <replace
-            css:theme-children=".portlet-right #portlet-right"
+            css:theme-children=".portlet-right #portlet-right .inner-portlet-right"
             css:content-children="#portal-column-two"
             css:if-content="#portal-column-two"
             css:if-not-content="#portal-column-one"
@@ -275,25 +275,26 @@
             </rules>
             <rules css:if-content="#portal-column-one">
                 <replace
-                css:theme-children="#portlet-right"
+                css:theme-children="#portlet-right .inner-portlet-right"
                 css:content-children="#portal-column-two"
                 css:if-content="#portal-column-two"
                 />
             </rules>
             <rules css:if-content="#portal-column-two">
                 <replace
-                    css:theme-children="#portlet-left"
+                    css:theme-children="#portlet-left .inner-portlet-left"
                     css:content-children="#portal-column-one"
                     css:if-content="#portal-column-one"
                 />            
             </rules>
         <!-- Portlet bold : END -->
         <!-- No portlet : Start -->
-            <rules css:if-not-content="#portal-column-one">
-                <rules css:if-not-content="#portal-column-two">
-                    <replace
-                        css:theme-children=".no-portlet #maincontent"
-                        css:content-children="#portal-column-content"/>
+        <rules css:if-not-content="#portal-column-one">
+            <rules css:if-not-content="#portal-column-two">
+                <replace
+                    css:theme-children=".no-portlet #maincontent"
+                    css:content-children="#portal-column-content"
+                />
                 <drop
                     css:theme=".portlet-both"
                 />
@@ -306,6 +307,55 @@
             </rules>
         </rules>
         <!-- No Portlet : End -->
+        <!-- PS Silder : Start -->
+        <rules css:if-content=".ps_slider.aboveContent">
+            <prepend
+                css:theme=".ps_slider_wrapper.col-md-12"
+                css:content=".ps_slider"
+                method="raw"
+            />
+            <drop
+                css:content=".ps_slider"
+            />
+            <drop
+                css:theme=".ps-left"
+            />
+            <drop
+                css:theme=".ps-right"
+            />
+        </rules>
+        <rules css:if-content=".ps_slider.portletLeft">
+            <prepend
+                css:theme=".ps_slider_wrapper.ps-left"
+                css:content=".ps_slider"
+                method="raw"
+            />
+            <drop
+                css:content=".ps_slider"    
+            />
+            <drop
+                css:theme=".ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.col-md-12"
+            />
+        </rules>
+        <rules css:if-content=".ps_slider.portletRight">
+            <prepend
+                css:theme=".ps_slider_wrapper.ps-right"
+                css:content=".ps_slider"
+                method="raw"
+            />
+            <drop
+                css:content=".ps_slider"
+            />
+            <drop
+                css:theme=".ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.col-md-12"
+            />
+        </rules>
     </rules>
 
 </rules>
