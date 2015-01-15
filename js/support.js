@@ -304,7 +304,13 @@ function class_print_listing(){
     Print = $( ".listing.detail p:contains('Print Listing')" );
     $(Print).addClass("print-listing");
 }
+function switch_slider_cover(){
+    $(".ps_coverintegrated").replaceWith($( ".coverIntegrated" ));
+}
 $(document).ready(function() {
+    if($('.ps_slider').length > 0){
+        switch_slider_cover();
+    }
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();

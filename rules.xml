@@ -310,7 +310,7 @@
         <!-- PS Silder : Start -->
         <rules css:if-content=".ps_slider.aboveContent">
             <prepend
-                css:theme=".ps_slider_wrapper.col-md-12"
+                css:theme=".ps_slider_wrapper.aboveContent"
                 css:content=".ps_slider"
                 method="raw"
             />
@@ -318,10 +318,16 @@
                 css:content=".ps_slider"
             />
             <drop
-                css:theme=".ps-left"
+                css:theme=".ps_slider_wrapper.ps-left"
             />
             <drop
-                css:theme=".ps-right"
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.portletLeft">
@@ -334,10 +340,16 @@
                 css:content=".ps_slider"    
             />
             <drop
-                css:theme=".ps-right"
+                css:theme=".ps_slider_wrapper.ps-right"
             />
             <drop
-                css:theme=".ps_slider_wrapper.col-md-12"
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.portletRight">
@@ -350,10 +362,70 @@
                 css:content=".ps_slider"
             />
             <drop
-                css:theme=".ps-left"
+                css:theme=".ps_slider_wrapper.ps-left"
             />
             <drop
-                css:theme=".ps_slider_wrapper.col-md-12"
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
+            />
+        </rules>
+        <rules css:if-content=".ps_slider.aboveMenue">
+            <prepend
+                css:theme=".ps_slider_wrapper.aboveMenu"
+                css:content=".ps_slider"
+                method="raw"
+            />
+            <drop
+                css:content=".ps_slider"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
+            />
+        </rules>
+        <rules css:if-content=".ps_slider.aboveColumns">
+            <prepend
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns .abovecolumns"
+                css:content=".ps_slider"
+                method="raw"
+            />
+            <drop
+                css:content=".ps_slider"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+        </rules>
+        <rules css:if-content=".ps_slider.coverIntegrated">
+            <drop
+                css:theme=".ps_slider_wrapper"
+            />
+        </rules>
+        <rules css:if-not-content=".ps_slider">
+            <drop
+                css:theme=".ps_slider_wrapper"
             />
         </rules>
     </rules>

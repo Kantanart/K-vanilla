@@ -1,71 +1,7 @@
 @import "command.less";
 
-#global-wrapper div.formControls {
-    text-align: left;
-    margin: auto 0;
-}
-#content .listing.detail .print-listing {
-    margin-bottom: 20px;
-}
-#content .listing.detail .print-listing a {
-    background-image: url("../images/icons/Print-icon.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid;
-    border-top: 1px solid;
-    font-weight: bold;
-    padding: 8px 13px 8px 32px;
-    .transition;
-}
-#content .listing.detail .print-listing a:hover {
-    border-bottom: 3px solid;
-    border-top: 3px solid;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .price .item-heading {
-    display: none;
-}
-.doormat-location .dm-address,.doormat-location .dm-mobile,.doormat-location .dm-office,.doormat-location .dm-email,.doormat-location .dm-skype {
-    font-weight: bold;
-    display: inline-flex;
-    width: 100%;
-}
-.doormat-location div p,.doormat-location div a {
-    font-weight: normal !important;
-    margin-bottom: 3px;
-}
-#content dl.portlet dd.portletItem, #content dl.portlet dd.portletFooter, #content dl.portletError dd {
-    padding: 0;
-}
-#content .portletAgentInformation .portletHeader , #content .portletAgentContact .portletHeader {
-    margin-bottom: 10px;
-    padding: 0;
-}
-#content .portletAgentInformation .portletItem .contact_details {
-    margin-top: 0;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .beds_baths .item-heading {
-    background-image: url("../images/icons/bedbath.png");
-    background-position: -5px center;
-    height: 20px;
-    margin-right: 10px;
-    text-indent: -9999px;
-    white-space: nowrap;
-    width: 55px !important;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .beds_baths {
-    margin-top: 5px;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .location .item-heading {
-    background-image: url("../images/icons/bubble-address.png");
-    background-position: -10px center;
-    height: 22px;
-    margin-right: 3px;
-    text-indent: -9999px;
-    white-space: nowrap;
-    width: 28px !important;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .location {
-    margin-top: 5px;
+#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:hover,#global-wrapper #wrapper-inner #navigation #id_nav1 ul.navmenu li a:focus {
+
 }
 #navigation #id_nav1 ul.navmenu li a {
     .add-style-of-navbar-button-text;
@@ -135,21 +71,22 @@ a.google:hover ,a.google:focus {
     padding-right: 30px !important;
 }
 .site-social-switch a.active{
-    background-image: url("../images/social-hide.png");
-    margin-left: -26px;
+    background-image: url("../images/arrow-right-black.png");
 }
 .site-social-switch {
     position: fixed;
-    top: 411px;
+    top: 210px;
     z-index: 9999;
     a {
-        .transition;
-        background-image: url("../images/social-show.png");
+        background-image: url("../images/arrow-left-black.png");
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: 48px 20px;
+        background-size: 8px 11px;
         display: block;
+        height: 40px;
         width: 40px;
+        border: 2px solid #ddd;
+        border-radius: 28px;
     }
 }
 #global-wrapper .site-social.site-close {
@@ -186,31 +123,21 @@ a.google:hover ,a.google:focus {
     }
 }
 .site-email {
-    background-image: url("../images/icons/mail-gray.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 17px 11px;
-    float: left;
-    margin-left: 77px;
-    padding-left: 24px;
+    float: right;
     width: auto;
+    margin-left: 40px;
 }
 .site-phone {
-    background-image: url("../images/icons/cell-phone-gray.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 12px 20px;
-    float: left;
-    margin-left: 94px;
-    padding-left: 17px;
+    float: right;
     width: auto;
+    margin-left: 40px;
 }
 .logo-wrapper .logo {
     float: left;
     max-width: 100%;
 }
 .logo-wrapper .info{
-    float: left;
+    float: right;
     margin-top: 15px;
 }   
 #portal-searchbox {
@@ -246,22 +173,14 @@ a.google:hover ,a.google:focus {
     }
     .portaltype-collective-cover-content .cell.width-10.position-0 {
         width: 59%;
-    }
+        }
 }
 @media (max-width: 1200px) and (min-width: 981px) {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
         padding-left: 15px;
     }
     .logo-wrapper .info{
-        width: 480px;
-    }
-    .site-phone {
-        padding-left: 24px !important;
-        margin-left: 35px !important;
-    }
-    .site-email {
-        margin-left: 35px !important;
-        padding-left: 26px !important;
+        width: 50%;
     }
 }
 @media (max-width: 980px) and (min-width: 801px) {
@@ -275,14 +194,6 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         left: 69%
     }
-    .site-phone {
-        padding-left: 24px !important;
-        margin-left: 35px !important;
-    }
-    .site-email {
-        margin-left: 35px !important;
-        padding-left: 26px !important;
-    }
 }
 @media (max-width: 800px) and (min-width: 768px) {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
@@ -294,18 +205,10 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         left: 70%
     }
-    .site-phone {
-        padding-left: 24px !important;
-        margin-left: 35px !important;
-    }
-    .site-email {
-        margin-left: 35px !important;
-        padding-left: 26px !important;
-    }
 }
 @media (max-width: 767px) and (min-width: 481px) {    
     .language-switcher #portal-languageselector{
-        top: -8px;
+        top: -5px;
     }
     .navbar-collapse .navmenu li ul.submenu {
         position: static;
@@ -360,26 +263,10 @@ a.google:hover ,a.google:focus {
     #portal-searchbox {
         display: none;
     }
-    .site-phone {
-        padding-left: 24px !important;
-        margin-left: 35px !important;
-        width: 142px;
-    }
-    .site-email {
-        margin-left: 14px !important;
-        padding-left: 26px !important;
-        width: 180px;
-    }
-    .logo-wrapper .info .site-phone {
-        float: left !important;
-    }
-    .logo-wrapper .info .site-email {
-        float: left !important;    
-    }
 }
 @media (max-width: 480px) and (min-width: 1px) {
     .language-switcher #portal-languageselector{
-        top: -8px;
+        top: -5px;
     }
     #navigation #id_nav1 ul.navmenu li ul.submenu {
         position: absolute;
@@ -428,13 +315,5 @@ a.google:hover ,a.google:focus {
     }
     .documentEditable #content .listing-summary figure img {
         width: 100% !important;
-    }
-    .site-phone {
-        padding-left: 24px !important;
-        margin-left: 35px !important;
-    }
-    .site-email {
-        margin-left: 35px !important;
-        padding-left: 26px !important;
     }
 }

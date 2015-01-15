@@ -1,12 +1,9 @@
-@import "command.less";
-
 // ----- Font Setting -----
     @normal: 14px;
     @1h-size: 30px;
     @2h-size: 24px;
     @3h-size: 24px;
     @4h-size: 20px;
-    @porletheader-size: 24px;
     @tileHeadline-listing-search: 24px;
     @caroulse-title-size: 14px;
     @add-font-size-menu: 16px;
@@ -58,7 +55,6 @@
     @color-account: #fff;
     @color-menu: #707070;
     @color-header-listing: #248e00;
-    @color-carousel-title: #fff;
 // ----- Background - Start -----
     // ----- Listing Grid -----
     @listing-text-name: @color-link;
@@ -131,9 +127,6 @@
     background-image: -ms-linear-gradient(@origin, @start, @stop);
     background-image: linear-gradient(@origin, @start, @stop);
 }
-.doormat-location .dm-address,.doormat-location .dm-mobile,.doormat-location .dm-office,.doormat-location .dm-email,.doormat-location .dm-skype {
-    color: @color-header-listing;
-}
 #global-wrapper {
     color: @color-main;
     #wrapper-inner {
@@ -175,17 +168,7 @@
         background-color: @bg-content;
     }
 }
-#global-wrapper label {
-    color: @color-main;
-    font-size: 14px !important;
-}
-#footer-wrapper #footer-top-inner .doormatColumn .nav li {
-    border-bottom: 1px dashed @color-link;
-}
-.mlsec_latest-listings .listing-collection-tile .collection-item .price .item-body {
-    font-size: @2h-size !important;
-    color: @color-link !important;
-}
+
 .portlet .portletHeader .managedPortletActions{
     font-size: 14px !important;
 }
@@ -196,8 +179,7 @@
     font-size: 1.4em;
 }
 .portlet .portletHeader {
-    font-size: @porletheader-size;
-    color: @color-header-listing;
+    font-size: 30px;
 }
 dl.portlet dt.portletHeader {
     background: @bg-portlet-header;
@@ -254,8 +236,6 @@ span.label{
 }
 span.carousel-title {
     font-size: @add-font-size-carousel-title;
-    color: @color-carousel-title;
-    font-weight: bold;
 }
 .form-rows ul.formTabs li.formTab a span {
     color: @color-span-form;
@@ -331,30 +311,6 @@ label.horizontal.collapser.expanded {
 }
 #portal-personaltools dd a:hover {
     background-color: @bg-navigation-button-hover !important;
-}
-#global-wrapper input.submit-widget{
-    .transition;
-    background-color:@color-header-listing;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid @color-header-listing;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px -1px 0px #5b6178;
-}
-#global-wrapper input.submit-widget:hover {
-    box-shadow: inset 0 0 0 20px @color-link;
-}
-#global-wrapper input.submit-widget:active {
-    position:relative;
-    top:1px;
 }
 // ----- Header style - Start-----
     // --- Header Normal ---
