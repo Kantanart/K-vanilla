@@ -309,14 +309,6 @@
         <!-- No Portlet : End -->
         <!-- PS Silder : Start -->
         <rules css:if-content=".ps_slider.aboveContent">
-            <prepend
-                css:theme=".ps_slider_wrapper.aboveContent"
-                css:content=".ps_slider"
-                method="raw"
-            />
-            <drop
-                css:content=".ps_slider"
-            />
             <drop
                 css:theme=".ps_slider_wrapper.ps-left"
             />

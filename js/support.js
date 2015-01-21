@@ -305,12 +305,28 @@ function class_print_listing(){
     $(Print).addClass("print-listing");
 }
 function switch_slider_cover(){
-    $(".ps_coverintegrated").replaceWith($( ".coverIntegrated" ));
+    if($(".template-layoutedit").length>0){
+        $(".ps_coverintegrated .tile-name").replaceWith($( ".coverIntegrated" ));  
+    }
+    else{
+        $(".ps_coverintegrated").replaceWith($( ".coverIntegrated" ));
+    }
+}
+function cover_listing_height(){
+    $("#content .listing-collection-tile").each(function() {
+        var maxHeight = 0;
+        $(" .collection-item", this).each(function() {
+            if($(this).height() > maxHeight) {
+                maxHeight = $(this).height();  
+            }
+        });
+    $(".collection-item").height(maxHeight,"px");
+});
 }
 $(document).ready(function() {
-    if($('.ps_slider').length > 0){
+    if($('.ps_slider.coverIntegrated').length > 0){
         switch_slider_cover();
-    }
+    }    
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();
@@ -321,20 +337,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    // Ajax Complete
-    $( document ).ajaxComplete(function() {
-        if (is_ListingRowPage()) {
-            //change Listings
-            $(".tileItem section:not(.improved)").each(function(index){
-                if(!is_improvedListing($(this))){
-                    ajax_improveListing($(this));
-                    console.log("Ajax : End");
-                }
-            });
-        }
-    });
-
 
     // only do when we have a listingbar
     if($('.listingBar').length > 0){
@@ -358,8 +360,28 @@ $(document).ready(function() {
         doormat_col_class=getDoormatClass();
         $("#footer-top-inner .doormatColumn").addClass(doormat_col_class);
     }
+    // Ajax Complete
+    $( document ).ajaxComplete(function() {
+        if (is_ListingRowPage()) {
+            //change Listings
+            $(".tileItem section:not(.improved)").each(function(index){
+                if(!is_improvedListing($(this))){
+                    ajax_improveListing($(this));
+                    console.log("Ajax : End");
+                }
+            });
+        }
+    });
+    
+    $( window ).load(function() {
+        if($('#content .listing-collection-tile').length > 0){
+            cover_listing_height();
+        }
+    });
+    
+    $(window).resize(function() {
 
-
+    });
 });
 
 
