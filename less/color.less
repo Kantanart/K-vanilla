@@ -18,15 +18,18 @@
     @listing-price: 30px;
 // ----- Background Setting -----  
     @bg-wrapper-inner:transparent;
-    @bg-account: #23451d;
+    @bg-account: #c4c4c4;
     @bg-header: #fff;
-    @bg-navigation: #ececec;
+    @bg-navigation: #f3f3f3;
     @bg-navigation-button: #23451d;
-    @bg-navigation-button-hover: #1c3717;
+    @bg-navigation-button-hover: #dadada;
     @bg-content: #fff;
     @bg-doormat: #eeeeee ;
     @bg-colophone: @bg-account;
     //--- header style ---
+    @text-of-menu-header-normal: #4b4b4b;
+    @text-of-menu-header-dark: @text-of-menu-header-normal;
+    
     @bg-normal-account: @bg-account;
     @bg-normal-header: @bg-header;
     @bg-normal-navigation: @bg-navigation;
@@ -34,30 +37,30 @@
     @bg-normal-bg-menu-hover: @bg-navigation-button-hover;
     
     @bg-dark-account: @bg-account;
-    @bg-dark-header: #375931;
+    @bg-dark-header: #ececec;
     @bg-dark-navigation: @bg-navigation;
     @bg-dark-text-menu-hover: @color-link;
     @bg-dark-bg-menu-hover: @bg-navigation-button-hover;
     
     @bg-light-account: @bg-header;
     @bg-light-header: @bg-header;
-    @bg-light-navigation: @bg-navigation-button;
+    @bg-light-navigation: @bg-account;
     @bg-light-text-menu-hover: @color-link;
     @bg-light-bg-menu-hover: @bg-navigation-button-hover;
     
     @bg-both-account: @bg-account;
     @bg-both-header: @bg-header;
-    @bg-both-navigation: @bg-navigation-button;
+    @bg-both-navigation: @bg-account;
     @bg-both-text-menu-hover: @color-link;
     @bg-both-bg-menu-hover: @bg-navigation-button-hover;
     
 // ----- Text Setting -----
     @color-main: #707070;
-    @color-link: #5bc506;
-    @color-link-hover: #5bc506;
+    @color-link: #5A7D85;
+    @color-link-hover: #80a3ab;
     @color-account: #fff;
     @color-menu: #707070;
-    @color-header-listing: #248e00;
+    @color-header-listing: #A4A4A4;
     @color-carousel-title: #fff;
 // ----- Background - Start -----
     // ----- Listing Grid -----
@@ -67,6 +70,7 @@
     @listing-text-other: @color-main;
     @listing-text-price: @color-main;
     // ----- Background of Menu-----
+    @color-text-navbar: #000000;
     @bg-navigation-navbar: @bg-navigation-button;
     @bg-navigation-submenu: @bg-navigation-button;
     @bg-navigation-submenu-li: @bg-navigation-button;
@@ -96,7 +100,6 @@
     @color-span-form: @color-main;
     @color-breadcrumb: @color-main;
     @color-breadcrumb-hover: @color-link-hover;
-    @color-link-hover: @color-menu-hover;
     @color-menu-hover: @color-link;
     // ----- Footer Text/Background -----
     @color-h2-doormat: @color-header-listing;
@@ -174,6 +177,53 @@
     #content {
         background-color: @bg-content;
     }
+}
+.listingBar span.active span{
+    font-size: 14px !important;
+    color: #fff;
+    background-color: @color-link !important;
+}
+div.listingBar a:hover{
+    background-color: @color-link !important;
+    border-color: @color-link !important;
+}
+.listingBar span.active {
+    border: 0.1em solid @color-link;
+    background-color: @color-link !important;
+}
+.improved .name-of-property a {
+    font-size: @listing-name;
+    color: @listing-text-name;
+}
+.improved .status a {
+    font-size: @listing-status;
+    color: @listing-text-status;
+}
+.improved .location a {
+    font-size: @listing-other;
+    color: @listing-text-location;
+}
+.improved .bedrooms a {
+    font-size: @listing-other;
+    color: @listing-text-other;
+}
+.improved .area .value {
+    font-size: @listing-other;
+    color: @listing-text-other;
+}
+.improved .price p {
+    font-size: @listing-price;
+    color: @listing-text-price;
+}
+.improved .status {
+    border-bottom: 1px dotted @listing-text-status;
+}
+.listing-summary .row #search-form p#show-form a {
+    font-size: @2h-size;
+    font-weight: bold;
+}
+#content .documentDescription{
+    color: @color-of-description;
 }
 #global-wrapper label {
     color: @color-main;
@@ -393,7 +443,7 @@ label.horizontal.collapser.expanded {
     }
     .header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
         background-color: @bg-normal-navigation !important; 
-        color: @bg-normal-account !important;
+        color: @text-of-menu-header-normal !important;
     }
     .header-normal #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a:hover, .header-light #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a:focus {
         color: @bg-normal-text-menu-hover !important; 
@@ -444,7 +494,7 @@ label.horizontal.collapser.expanded {
     }
     .header-dark #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a {
         background-color: @bg-dark-navigation !important; 
-        color: @bg-dark-account !important;
+        color: @text-of-menu-header-dark !important;
     }
     .header-dark #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a:hover, .header-dark #global-wrapper #wrapper-inner #navigation .container #id_nav1 ul.navmenu li a:focus {
         color: @bg-dark-text-menu-hover !important; 

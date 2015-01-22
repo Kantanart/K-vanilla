@@ -1,5 +1,8 @@
 @import "command.less";
 
+#wrapper-inner #header .navbar {
+    margin-top: 20px;
+}
 #global-wrapper .portletQuickSearch div.formControls {
     text-align: center;
 }
@@ -9,7 +12,13 @@
 .portletQuickSearch #form-widgets-location_state {
     width: 95.5%;
 }
-.portletQuickSearch #formfield-form-widgets-beds , .portletQuickSearch #formfield-form-widgets-baths , .portletQuickSearch #formfield-form-widgets-lot_size , .portletQuickSearch #formfield-form-widgets-interior_area{
+
+.listing-search-tile #formfield-form-widgets-location_state , .listing-search-tile #formfield-form-widgets-location_county , .listing-search-tile #formfield-form-widgets-location_city , .listing-search-tile #formfield-form-widgets-location_district {
+    input , select {
+        width: 96%;
+    }    
+}
+.listing-search-tile #formfield-form-widgets-interior_area , .listing-search-tile #formfield-form-widgets-lot_size , .listing-search-tile #formfield-form-widgets-baths , .listing-search-tile #formfield-form-widgets-beds , .portletQuickSearch #formfield-form-widgets-beds , .portletQuickSearch #formfield-form-widgets-baths , .portletQuickSearch #formfield-form-widgets-lot_size , .portletQuickSearch #formfield-form-widgets-interior_area{
     width: 100%;
     #form-widgets-beds-min , #form-widgets-baths-min , #form-widgets-interior_area-min , #form-widgets-lot_size-min {
         width: 45%;
@@ -28,7 +37,7 @@
     width: 50%;
     clear: none;
     label {
-        width: 90%;
+        width: auto;
     }
     input {
         width: 90%;
@@ -104,6 +113,7 @@
 }
 #content {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 #global-wrapper {
     #wrapper-inner {
@@ -223,9 +233,6 @@ body a:hover,#content a:focus {
     margin: 0 8px 0 0;
     text-align: left;
 }
-#content .documentDescription{
-    color: @color-of-description;
-}
 ul#content-views li{
     display: inline;
     margin: 0;
@@ -283,18 +290,7 @@ fieldset{
     border: medium none !important;
 }
 .listingBar span.active {
-    border: 0.1em solid @color-link;
     padding: 0.65em 0.75em 0.5em;
-    background-color: @color-link !important;
-}
-.listingBar span.active span{
-    font-size: 14px !important;
-    color: #fff;
-    background-color: @color-link !important;
-}
-div.listingBar a:hover{
-    background-color: @color-link !important;
-    border-color: @color-link !important;
 }
 .header-special {
     float: left;
@@ -409,37 +405,10 @@ ul#portal-languageselector:hover li {
 .properties-rows .tileItem figure a {
     padding: 0 !important;
 }
-.improved .name-of-property a {
-    font-size: @listing-name;
-    color: @listing-text-name;
-}
-.improved .status a {
-    font-size: @listing-status;
-    color: @listing-text-status;
-}
-.improved .location a {
-    font-size: @listing-other;
-    color: @listing-text-location;
-}
-.improved .bedrooms a {
-    font-size: @listing-other;
-    color: @listing-text-other;
-}
-.improved .area .value {
-    font-size: @listing-other;
-    color: @listing-text-other;
-}
-.improved .price p {
-    font-size: @listing-price;
-    color: @listing-text-price;
-}
 .improved .bedbath {
     display: inline-block;
     width: 60%;    
     margin-bottom: 3px;
-}
-.improved .status {
-    border-bottom: 1px dotted @listing-text-status;
 }
 .improved .status a{
     margin-left: 5px;
@@ -488,10 +457,6 @@ ul#portal-languageselector:hover li {
 }
 .improved .image {
     margin-right: 1% !important;
-}
-.listing-summary .row #search-form p#show-form a {
-    font-size: @2h-size;
-    font-weight: bold;
 }
 .listing-summary .row #search-form p#show-form{
     margin-top: 10px;

@@ -300,10 +300,12 @@ function toggle_listing_type(){
         }
     });
 }
+
 function class_print_listing(){
     Print = $( ".listing.detail p:contains('Print Listing')" );
     $(Print).addClass("print-listing");
 }
+
 function switch_slider_cover(){
     if($(".template-layoutedit").length>0){
         $(".ps_coverintegrated .tile-name").replaceWith($( ".coverIntegrated" ));  
@@ -312,17 +314,23 @@ function switch_slider_cover(){
         $(".ps_coverintegrated").replaceWith($( ".coverIntegrated" ));
     }
 }
+
 function cover_listing_height(){
     $("#content .listing-collection-tile").each(function() {
         var maxHeight = 0;
-        $(" .collection-item", this).each(function() {
+        $(this).find(".collection-item").each(function() {
             if($(this).height() > maxHeight) {
                 maxHeight = $(this).height();  
             }
         });
-    $(".collection-item").height(maxHeight,"px");
-});
+        $(this).find(".collection-item").height(maxHeight);
+	});
 }
+
+function resize_cover_listing_item(){
+	console.log("resize:Start");
+}
+
 $(document).ready(function() {
     if($('.ps_slider.coverIntegrated').length > 0){
         switch_slider_cover();
@@ -378,10 +386,13 @@ $(document).ready(function() {
             cover_listing_height();
         }
     });
-    
-    $(window).resize(function() {
 
+    $(window).resize(function() {
+        if($('#content .listing-collection-tile').length > 0){
+           	cover_listing_height()
+        }
     });
+    
 });
 
 
