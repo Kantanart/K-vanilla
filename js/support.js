@@ -31,10 +31,12 @@ function improve_img_row(){
         $(this).empty().after(child);
     });
 }
+
 function add_class_improvelisting(){
     $(".listing-summary .tileItem").addClass('property').wrapInner('<div class="row" />');
     $(".listing-summary .property figure").addClass('image col-md-3').wrapInner('<div class="content" />');
 }
+
 function ajax_improveListing(listing){
     // changes html of ONE listing
     $(listing).addClass('improved');
@@ -125,6 +127,7 @@ function map_listing_data(obj){
   dict.location = parse_location(dict.location);
   return dict;
 }
+
 function parse_location(location){
     //unparsed: San Joaquín, San Joaquín de Flores, Flores, Heredia, Costa Rica
     //parsed: San Joaquín, Heredia, Costa Rica 
@@ -332,6 +335,7 @@ function resize_cover_listing_item(){
 }
 
 $(document).ready(function() {
+    
     if($('.ps_slider.coverIntegrated').length > 0){
         switch_slider_cover();
     }    

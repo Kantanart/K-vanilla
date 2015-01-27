@@ -16,6 +16,20 @@ function move_menubottom() {
      });
 }
 
+function carousel_clear() {
+$(".palette .header-special .add-carousel-clear").click(function(){
+    if($("#carousel-wrapper.container").length>0){
+        $( "#carousel-wrapper" ).removeClass("container");
+        $( "#carousel-wrapper .carousel-inner" ).removeClass("col-md-12");
+    }
+    else {
+        $( "#carousel-wrapper" ).addClass("container");
+        $( "#carousel-wrapper .carousel-inner" ).addClass("col-md-12");
+    }
+   
+ });
+}
+
 function Add_header_normal() {
     $(".palette .headers ul li a.add-header-normal").click(function(){
          $("body").removeClass(" header-both header-light header-dark ");
@@ -51,6 +65,7 @@ function Checkpalette() {
 }
 
 $(document).ready(function() {
+    carousel_clear();
     Checkpalette();
     InitPalette();
     Add_header_normal();

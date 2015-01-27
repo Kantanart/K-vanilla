@@ -1,14 +1,130 @@
 @import "command.less";
 
+#portal-searchbox .LSBox #searchGadget {
+    border: 1px solid #d5d5d5;
+    height: 34px;
+    width: 146px;
+    padding-left: 15px;
+}
+#portal-searchbox .LSBox .searchButton {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    background-image: url("../images/icons/search.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    border-color: #d5d5d5 #d5d5d5 #d5d5d5 -moz-use-text-color;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 34px;
+    margin: 0 0 0 -5px;
+    padding: 6px 15px;
+    text-indent: -9999px;
+    text-shadow: none;
+    vertical-align: top;
+    width: auto;
+}
+
+#wrapper-inner .site-social .facebook {
+    background-image: url("../images/icons/sc-fb-s.png");
+    background-repeat: no-repeat;
+    height: 24px;
+    padding-left: 24px;
+    position: absolute;
+}
+#wrapper-inner .site-social .facebook:hover {
+    background-image: url("../images/icons/sc-fb.png");
+}
+#wrapper-inner .site-social .google {
+    background-image: url("../images/icons/sc-gg-s.png");
+    background-repeat: no-repeat;
+    height: 24px;
+    padding-left: 24px;
+    position: absolute;
+    left: 70px;
+}
+#wrapper-inner .site-social .google:hover {
+    background-image: url("../images/icons/sc-gg.png");
+}
+#wrapper-inner .site-social .twitter {
+    background-image: url("../images/icons/sc-tt-s.png");
+    background-repeat: no-repeat;
+    height: 24px;
+    padding-left: 24px;
+    position: absolute;
+    left: 35px;
+}
+#wrapper-inner .site-social .twitter:hover {
+    background-image: url("../images/icons/sc-tt.png");
+}
+#wrapper-inner .site-social {
+    width: auto;
+    position: relative;
+    top: 7px;
+}
+#wrapper-inner .info {
+    float: right;
+    margin-right: 90px;
+    margin-top: 10px;
+}
+#wrapper-inner .site-email {
+    background-image: url("../images/icons/sc-mail.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    float: left;
+    margin-left: 77px;
+    padding-left: 29px;
+    width: auto;
+    line-height: 20px;
+    a {
+        font-size: 12px;
+    }
+}
+#wrapper-inner .site-phone {
+    background-image: url("../images/icons/sc-phone.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    float: left;
+    margin-left: 45px;
+    padding-left: 29px;
+    width: auto;
+    line-height: 20px;
+    a {
+        font-size: 12px;
+    }
+}
+.logo-wrapper .logo {
+    float: left;
+    max-width: 100%;
+}
+.template-login_form #login-form .formControls {
+    text-align: center;
+}
+#carousel-wrapper {
+    margin-bottom: 15px;
+}
+
 #wrapper-inner #header .navbar {
     margin-top: 20px;
 }
+
 #global-wrapper .portletQuickSearch div.formControls {
     text-align: center;
 }
+
 .portletQuickSearch #form-widgets-location_city {
     width: 95.5%;
 }
+
 .portletQuickSearch #form-widgets-location_state {
     width: 95.5%;
 }
@@ -258,9 +374,6 @@ ul#content-views li{
 }
 #carousel-wrapper {
     margin-top: 15px;
-}
-.logo-wrapper .info{
-    max-width: 100%;
 }
 #header #header-inner .container{
     z-index: 1;
@@ -578,6 +691,22 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 767px) and (min-width: 481px) {
+    #wrapper-inner .site-social {
+        position: relative;
+        top: 36px;
+        width: auto;
+    }
+    #wrapper-inner .info {
+        float: left;
+        margin-bottom: 39px;
+        margin-left: -14px;
+        margin-top: 10px;
+        margin-right: 0;
+        width: 86%;
+    }
+    #wrapper-inner .site-phone {
+        margin-left: 20px !important;
+    }
     #global-wrapper #content .listing-collection-tile .item-heading {
         width: 18%;
     }
@@ -648,6 +777,9 @@ ul#portal-languageselector:hover li {
     }
 }
 @media (max-width: 480px) and (min-width: 1px) {
+    #wrapper-inner .info {
+        display: none;
+    }
     .improved .name-of-property {
         margin-top: 10px !important;
     }
