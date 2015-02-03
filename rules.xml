@@ -389,5 +389,12 @@
             />
         </rules>
     </rules>
+<!-- Move PS Slider into cover Tile -->
+<!--  -->
+<replace css:content=".tile.ps_coverintegrated" css:if-content=".ps_slider.coverIntegrated">
+  <xsl:copy-of select="//div[@class='featured-listing-top ps_slider top coverIntegrated']" />
+  <xsl:apply-templates mode="raw" />
+</replace>
+<drop css:content="#viewlet-above-content .ps_slider.coverIntegrated" css:if-content=".tile.ps_coverintegrated" />
 
 </rules>

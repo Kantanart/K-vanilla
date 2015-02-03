@@ -327,7 +327,7 @@ function cover_listing_height(){
             }
         });
         $(this).find(".collection-item").height(maxHeight);
-	});
+    });
 }
 
 function resize_cover_listing_item(){
@@ -335,10 +335,6 @@ function resize_cover_listing_item(){
 }
 
 $(document).ready(function() {
-    
-    if($('.ps_slider.coverIntegrated').length > 0){
-        switch_slider_cover();
-    }    
     if (is_ListingRowPage()) {
         // set classes
         setup_ListingSummary();
@@ -393,7 +389,7 @@ $(document).ready(function() {
 
     $(window).resize(function() {
         if($('#content .listing-collection-tile').length > 0){
-           	cover_listing_height()
+            cover_listing_height();
         }
     });
     

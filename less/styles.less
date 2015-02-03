@@ -1,9 +1,27 @@
 @import "command.less";
 
+#global-wrapper .pic-l-side {
+    float: left;
+    width: 30%;
+}
+#global-wrapper .pic-r-side {
+    float: left;
+    width: 30%;
+}
 #global-wrapper div.formControls {
     text-align: left;
     margin: auto 0;
 }
+#global-wrapper #content select {
+    vertical-align: bottom;
+}
+body #global-wrapper .tile {
+    margin-bottom: 1.5em;
+}
+body .listing-search-tile #form .formControls {
+    text-align: center;
+}
+
 #content .listing.detail .print-listing {
     margin-bottom: 20px;
 }
@@ -129,9 +147,16 @@ label.horizontal.collapser.expanded {
     padding-top: 10px;
 }
 #portal-searchbox {
-    bottom: 0;
+    display: block;
+    float: right;
+    position: relative;
+    top: 33px;
+}
+.LSBox #LSResult #LSShadow {
+    background-color: #f3f3f3;
+    min-width: 220px;
     position: absolute;
-    right: 0;
+    z-index: 999999;
 }
 #wrapper-inner .site-social .site_social_link {
     float: left;
@@ -228,6 +253,10 @@ label.horizontal.collapser.expanded {
     background-repeat: no-repeat;
     background-size: 24px 24px;
     padding: 10px;
+}
+
+#content .listing-collection-tile .collection-item {
+    margin-bottom: 1.5em;
 }
 #wrapper-inner .site-social .bing:hover {
     background-image: url("../images/icons/bing.png");
@@ -442,6 +471,16 @@ label.horizontal.collapser.expanded {
 #content {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+#tile-configure {
+    overflow: scroll;
+}
+#global-wrapper input.submit-widget{
+    .transition;
+}
+
+#form-buttons-cancel {
+    margin-left: 10px;
 }
 #global-wrapper {
     #wrapper-inner {
@@ -858,9 +897,6 @@ ul#portal-languageselector:hover li {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
         padding-left: 15px;
     }
-    #portal-searchbox {
-        left: 69%
-    }
     .site-phone {
         padding-left: 24px !important;
         margin-left: 35px !important;
@@ -909,9 +945,6 @@ ul#portal-languageselector:hover li {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
         padding-left: 15px;
     }
-    #portal-searchbox {
-        left: 69%
-    }
     .site-phone {
         padding-left: 24px !important;
         margin-left: 35px !important;
@@ -956,9 +989,6 @@ ul#portal-languageselector:hover li {
 @media (max-width: 800px) and (min-width: 768px) {
     #navigation #id_nav1 ul.navmenu li ul.submenu li a:hover, #navigation #id_nav1 ul.navmenu li ul.submenu li a:focus{
         padding-left: 15px;
-    }
-    #portal-searchbox {
-        left: 70%
     }
     .site-phone {
         padding-left: 24px !important;
