@@ -130,13 +130,13 @@
             css:theme="#breadcrumbs-you-are-here"
         />
 
-        <drop
-            css:content="span#breadcrumbs-you-are-here"
-        />
+
         
         <drop
-            css:theme=".toggle"
-        />
+            css:content="span#breadcrumbs-you-are-here"/>
+        
+        <drop
+            css:theme=".toggle"/>
         
         <rules css:if-content="#portal-personaltools .actionMenuHeader">
             <prepend
@@ -231,7 +231,13 @@
                 css:content-children="#portal-column-content"
                 />
                 <drop
-                    css:theme=".no-portlet, .portlet-right, .portlet-left"
+                    css:theme=".no-portlet"
+                />
+                <drop
+                    css:theme=".portlet-left"
+                />
+                <drop
+                    css:theme=".portlet-right"
                 />
             </rules>
             </rules>
@@ -258,7 +264,13 @@
                     css:content-children="#portal-column-content"
                 />
                 <drop
-                    css:theme=".portlet-both, .portlet-right, .portlet-left"
+                    css:theme=".portlet-both"
+                />
+                <drop
+                    css:theme=".portlet-left"
+                />
+                <drop
+                    css:theme=".portlet-right"
                 />
             </rules>
         </rules>
@@ -266,7 +278,16 @@
         <!-- PS Silder : Start -->
         <rules css:if-content=".ps_slider.aboveContent">
             <drop
-                css:theme=".ps_slider_wrapper.ps-left, .ps_slider_wrapper.ps-right, .ps_slider_wrapper.aboveMenu, .ps_slider_wrapper.ps_slider_abovecolumns"
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.portletLeft">
@@ -279,7 +300,16 @@
                 css:content=".ps_slider"    
             />
             <drop
-                css:theme=".ps_slider_wrapper.ps-right, .ps_slider_wrapper.aboveContent, .ps_slider_wrapper.aboveMenu, .ps_slider_wrapper.ps_slider_abovecolumns"
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.portletRight">
@@ -292,7 +322,16 @@
                 css:content=".ps_slider"
             />
             <drop
-                css:theme=".ps_slider_wrapper.ps-left, .ps_slider_wrapper.aboveContent, .ps_slider_wrapper.aboveMenu, .ps_slider_wrapper.ps_slider_abovecolumns"
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.aboveMenue">
@@ -305,7 +344,16 @@
                 css:content=".ps_slider"
             />
             <drop
-                css:theme=".ps_slider_wrapper.ps-left, .ps_slider_wrapper.ps-right, .ps_slider_wrapper.aboveContent, .ps_slider_wrapper.ps_slider_abovecolumns"
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps_slider_abovecolumns"
             />
         </rules>
         <rules css:if-content=".ps_slider.aboveColumns">
@@ -318,7 +366,16 @@
                 css:content=".ps_slider"
             />
             <drop
-                css:theme=".ps_slider_wrapper.ps-left, .ps_slider_wrapper.ps-right, .ps_slider_wrapper.aboveContent, .ps_slider_wrapper.aboveMenu"
+                css:theme=".ps_slider_wrapper.ps-left"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.ps-right"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveContent"
+            />
+            <drop
+                css:theme=".ps_slider_wrapper.aboveMenu"
             />
         </rules>
         <rules css:if-content=".ps_slider.coverIntegrated">
