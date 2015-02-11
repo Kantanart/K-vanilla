@@ -9,6 +9,13 @@
     -ms-transition: @prop @time @ease;
     transition: @prop @time @ease;
 }
+.popular-search-transition (@prop: all, @time: 0.8s, @ease: 0s) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
 .transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
     -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
     -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
